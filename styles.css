@@ -42,6 +42,7 @@
 .page-events{--paper:#f3f0e8;--paper-2:#e8e0d0}
 .page-contact{--paper:#f3f0e8;--paper-2:#e8e1d2}
 .page-english{--paper:#f4f1eb;--paper-2:#e8e2d4}
+.page-shop{--wrap:1320px}
 
 *{box-sizing:border-box}
 html{overflow-x:hidden;scroll-behavior:smooth}

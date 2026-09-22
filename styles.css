@@ -227,9 +227,10 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .ev-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);gap:1.1rem 1.3rem;align-items:start;margin-top:1rem}
 .ev-stack{display:flex;flex-direction:column;gap:1.1rem}
 .ev{margin:0}
+.ev.frame{background:color-mix(in srgb,white 48%,var(--paper));padding-bottom:.85rem}
 .ev img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .ev.tall img{aspect-ratio:4/5}
-.ev figcaption{font-size:.78rem;color:var(--muted);margin-top:.55rem;line-height:1.45;max-width:36ch}
+.ev figcaption{font-size:.78rem;color:var(--muted);margin:.55rem .85rem 0;line-height:1.45;max-width:36ch}
 .ev figcaption b{color:var(--ink);font-weight:650;display:block;margin-bottom:.12rem}
 @media (max-width:880px){
   .claim .wrap,.ev-grid{grid-template-columns:minmax(0,1fr)}

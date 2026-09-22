@@ -42,6 +42,45 @@
     });
   }
 
+  var cartCards=document.querySelectorAll('.cat-card');
+  var cartItems=document.querySelector('.cart-items');
+  var cartCount=document.querySelector('.cart-count');
+  var cartTotal=document.querySelector('.cart-total strong');
+  var cartClear=document.querySelector('.cart-clear');
+  if(cartCards.length&&cartItems&&cartCount&&cartTotal){
+    var cart={};
+    function money(value){return 'R'+value.toLocaleString('en-ZA');}
+    function renderCart(){
+      var items=Object.values(cart);
+      var count=items.reduce(function(total,item){return total+item.quantity;},0);
+      var total=items.reduce(function(sum,item){return sum+(item.price*item.quantity);},0);
+      cartCount.textContent=String(count);
+      cartTotal.textContent=money(total);
+      if(cartClear)cartClear.hidden=!items.length;
+      if(!items.length){
+        cartItems.innerHTML='<p class="cart-empty">Jou mandjie is nog leeg.</p>';
+        return;
+      }
+      cartItems.innerHTML=items.map(function(item){
+        return '<div class="cart-item"><div><strong>'+item.name+'</strong><span>'+item.quantity+' × '+money(item.price)+'</span></div><button type="button" data-remove-cart="'+item.name+'">Verwyder</button></div>';
+      }).join('');
+      cartItems.querySelectorAll('[data-remove-cart]').forEach(function(button){
+        button.addEventListener('click',function(){delete cart[button.getAttribute('data-remove-cart')];renderCart();});
+      });
+    }
+    cartCards.forEach(function(card){
+      card.querySelector('.add-to-cart').addEventListener('click',function(){
+        var name=card.getAttribute('data-product');
+        var price=Number(card.getAttribute('data-price'));
+        if(!cart[name])cart[name]={name:name,price:price,quantity:0};
+        cart[name].quantity+=1;
+        renderCart();
+      });
+    });
+    if(cartClear)cartClear.addEventListener('click',function(){cart={};renderCart();});
+    renderCart();
+  }
+
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes=document.querySelectorAll('.reveal');
   if(!reduce&&'IntersectionObserver' in window&&nodes.length){

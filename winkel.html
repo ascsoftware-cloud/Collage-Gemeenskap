@@ -59,44 +59,63 @@
     </figure>
   </section>
 
-  <section class="catalogue wrap reveal" aria-label="Wat in die winkel is">
-    <h2>Kampe en groepe</h2>
-    <div class="cat-row">
-      <div><strong>Kidz Camp</strong><small>Registrasie vir die jaarlikse kinderkamp, met of sonder vervoer.</small></div>
-      <span class="price">R450–R900</span>
-    </div>
-    <div class="cat-row">
-      <div><strong>Collage Mannekamp</strong><small>Die jaarlikse naweek vir die mans van die gemeente.</small></div>
-      <span class="price">R1 350</span>
-    </div>
-    <div class="cat-row">
-      <div><strong>Kankerondersteuningsgroep</strong><small>Registrasie vir die deurlopende ondersteuningsgroep.</small></div>
-      <span class="price">R400</span>
-    </div>
+  <section class="shop-body wrap">
+    <section class="catalogue reveal" aria-label="Wat in die winkel is">
+      <h2>Kampe en groepe</h2>
+      <div class="cat-grid">
+        <article class="cat-card" data-product="Kidz Camp" data-price="450">
+          <strong>Kidz Camp</strong><small>Registrasie vir die jaarlikse kinderkamp, met of sonder vervoer.</small>
+          <div class="cat-card-foot"><span class="price">R450–R900</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="cat-card" data-product="Collage Mannekamp" data-price="1350">
+          <strong>Collage Mannekamp</strong><small>Die jaarlikse naweek vir die mans van die gemeente.</small>
+          <div class="cat-card-foot"><span class="price">R1 350</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="cat-card" data-product="Kankerondersteuningsgroep" data-price="400">
+          <strong>Kankerondersteuningsgroep</strong><small>Registrasie vir die deurlopende ondersteuningsgroep.</small>
+          <div class="cat-card-foot"><span class="price">R400</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+      </div>
 
-    <h2>Hulpbronne</h2>
-    <div class="cat-row">
-      <div><strong>Alles oor Openbaring</strong><small>’n Kursus oor die boek Openbaring.</small></div>
-      <span class="price">R150</span>
-    </div>
-    <div class="cat-row">
-      <div><strong>Klim Jou Everest</strong><small>’n Kursus oor deursettingsvermoë in geloof.</small></div>
-      <span class="price">R150</span>
-    </div>
+      <h2>Hulpbronne</h2>
+      <div class="cat-grid">
+        <article class="cat-card" data-product="Alles oor Openbaring" data-price="150">
+          <strong>Alles oor Openbaring</strong><small>’n Kursus oor die boek Openbaring.</small>
+          <div class="cat-card-foot"><span class="price">R150</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="cat-card" data-product="Klim Jou Everest" data-price="150">
+          <strong>Klim Jou Everest</strong><small>’n Kursus oor deursettingsvermoë in geloof.</small>
+          <div class="cat-card-foot"><span class="price">R150</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+      </div>
 
-    <h2>Tuin en byeenkomste</h2>
-    <div class="cat-row">
-      <div><strong>Koop ’n bankie</strong><small>Borg ’n bankie vir die tuin op die kerkterrein.</small></div>
-      <span class="price">R3 500</span>
-    </div>
-    <div class="cat-row">
-      <div><strong>Koop ’n boom</strong><small>Borg ’n boom vir dieselfde tuin.</small></div>
-      <span class="price">R2 500</span>
-    </div>
-    <div class="cat-row">
-      <div><strong>Padel Social</strong><small>Inskrywing vir ’n gemeente-padelaand.</small></div>
-      <span class="price">R50</span>
-    </div>
+      <h2>Tuin en byeenkomste</h2>
+      <div class="cat-grid">
+        <article class="cat-card" data-product="Koop ’n bankie" data-price="3500">
+          <strong>Koop ’n bankie</strong><small>Borg ’n bankie vir die tuin op die kerkterrein.</small>
+          <div class="cat-card-foot"><span class="price">R3 500</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="cat-card" data-product="Koop ’n boom" data-price="2500">
+          <strong>Koop ’n boom</strong><small>Borg ’n boom vir dieselfde tuin.</small>
+          <div class="cat-card-foot"><span class="price">R2 500</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="cat-card" data-product="Padel Social" data-price="50">
+          <strong>Padel Social</strong><small>Inskrywing vir ’n gemeente-padelaand.</small>
+          <div class="cat-card-foot"><span class="price">R50</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="cart-panel" aria-labelledby="cart-title">
+      <div class="cart-head">
+        <div><p class="eyebrow">Jou keuse</p><h2 id="cart-title">Mandjie <span class="cart-count">0</span></h2></div>
+        <button class="cart-clear" type="button" hidden>Maak leeg</button>
+      </div>
+      <div class="cart-items" aria-live="polite"><p class="cart-empty">Jou mandjie is nog leeg.</p></div>
+      <div class="cart-total"><span>Totaal</span><strong>R0</strong></div>
+      <a class="btn cart-checkout" href="https://collage.org.za/shop/" target="_blank" rel="noopener noreferrer">Gaan na amptelike winkel</a>
+      <p class="cart-note">Hierdie mandjie is ’n voorskou. Betaling gebeur op die amptelike winkel.</p>
+    </aside>
   </section>
 
   <figure class="caption-split shop-feature wrap reveal">

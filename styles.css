@@ -334,6 +334,10 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
   .foot-main{grid-template-columns:minmax(0,1fr);gap:.9rem;padding-block:1.25rem .85rem}
   .foot-bar{padding-block:.65rem .85rem}
 }
+@media (max-width:380px){
+  .cat-card-foot{align-items:flex-start;flex-direction:column}
+  .add-to-cart{width:100%}
+}
 
 /* ---- gebeure ---- */
 .event-hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:2rem 2.5rem;align-items:end;padding-block:3rem 1.5rem}

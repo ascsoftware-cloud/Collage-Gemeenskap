@@ -1,4 +1,4 @@
-# Collage Gemeenskapskerk — website
+# Collage Gemeenskapskerk | website
 
 Concept redesign for [Collage Gemeenskapskerk](https://collage.org.za/), an Afrikaans congregation in Elarduspark, Pretoria. Client work delivered by ASC Software.
 
@@ -11,8 +11,8 @@ Static HTML/CSS/JS. No build step, no backend, no dependencies. Fonts (Newsreade
 ## Structure
 
 ```
-index.html       Home — the week as the page's spine (seven-day rail, today marked live)
-gebeure.html      Gebeure (events) — service times and upcoming events
+index.html       Home: the week as the page's spine (seven-day rail, today marked live)
+gebeure.html      Gebeure (events): service times and upcoming events
 berading.html     Berading Sentrum (counseling centre)
 kliniek.html      Mediese Kliniek (medical clinic)
 english.html      English Service

@@ -32,6 +32,16 @@
     window.addEventListener('scroll',onScroll,{passive:true});
   }
 
+  var calendarToggle=document.querySelector('.calendar-toggle');
+  var calendarRail=document.getElementById('week-rail');
+  if(calendarToggle&&calendarRail){
+    calendarToggle.addEventListener('click',function(){
+      var expanded=document.body.classList.toggle('calendar-expanded');
+      calendarToggle.setAttribute('aria-expanded',String(expanded));
+      calendarToggle.textContent=expanded?'Wys net vandag':'Wys die week';
+    });
+  }
+
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes=document.querySelectorAll('.reveal');
   if(!reduce&&'IntersectionObserver' in window&&nodes.length){
@@ -87,6 +97,7 @@
       }
       next.textContent=label;
     }
+    document.body.classList.add('calendar-ready');
   }catch(e){}
 
   var form=document.getElementById('enquiry');

@@ -159,6 +159,7 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .week-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem 2rem;flex-wrap:wrap;margin-bottom:1.3rem}
 .week-head h1{font-size:clamp(2.1rem,1.3rem + 2.6vw,3.5rem);max-width:14ch}
 .week-head p{color:var(--muted);max-width:min(32ch,100%);margin:0;font-size:.92rem}
+.calendar-toggle{display:none}
 .rail{display:grid;grid-template-columns:1.7fr repeat(6,1fr);gap:.55rem}
 .day{background:#fffdf8;background:color-mix(in srgb,var(--paper) 55%,white);border:1px solid var(--rule);border-radius:18px;
   padding:1rem .85rem 1.1rem;display:flex;flex-direction:column;min-height:250px;
@@ -198,6 +199,13 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 @media (max-width:560px){
   .rail{grid-template-columns:minmax(0,1fr)}
   .day.sun{grid-column:auto}
+  .calendar-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:2.7rem;padding:.65rem .9rem;
+    border:1px solid var(--rule-strong);border-radius:999px;background:transparent;color:var(--ink);font:inherit;
+    font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;cursor:pointer;touch-action:manipulation}
+  .calendar-toggle:hover{background:var(--ink);color:var(--paper)}
+  .week-head{align-items:flex-start;margin-bottom:1rem}
+  .week-head p{font-size:.84rem}
+  body.calendar-ready:not(.calendar-expanded) .rail .day:not(.is-today){display:none}
 }
 
 /* ---- home claim + photos ---- */
@@ -472,7 +480,19 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 @media (max-width:800px){
   .shop-hero{grid-template-columns:minmax(0,1fr)}
   .shop-photo{order:-1}
-  .shop-photo img{border-radius:var(--radius);aspect-ratio:16/10}
+  .shop-hero{gap:1.15rem;padding-block:1.6rem .55rem}
+  .shop-hero h1{font-size:clamp(2.8rem,13vw,4.2rem)}
+  .shop-photo img{border-radius:var(--radius);aspect-ratio:2.2/1}
+  .shop-photo figcaption{font-size:.74rem;margin-top:.4rem}
+  .catalogue h2{margin-top:1.25rem;padding-top:.75rem;font-size:.95rem}
+  .cat-row{gap:.25rem .75rem;padding:.7rem 0}
+  .cat-row strong{font-size:1.2rem}
+  .cat-row small{font-size:.77rem;line-height:1.35}
+  .cat-row .price{font-size:1.25rem}
+  .shop-feature{margin-top:1.2rem;gap:.8rem}
+  .shop-feature img{aspect-ratio:2.2/1}
+  .shop-feature figcaption{font-size:.8rem}
+  .shop-feature figcaption b{font-size:1.15rem;margin-bottom:.2rem}
 }
 
 /* ---- kontak ---- */

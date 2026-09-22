@@ -114,10 +114,11 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .nav-links a.nav-cta::after{display:none}
 .nav-links a.nav-cta:hover{background:var(--gold-ink);color:#fff}
 .nav-links a.nav-cta[aria-current="page"]{background:var(--gold);color:#241a02}
-.menu-btn{display:none;flex:none;background:none;border:1px solid var(--rule-strong);color:var(--ink);font:inherit;
-  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:650;padding:.55rem .9rem;border-radius:999px;
-  cursor:pointer;touch-action:manipulation;transition:background .2s,color .2s}
-.menu-btn:hover{background:var(--ink);color:var(--paper)}
+.menu-btn{display:none;position:relative;flex:none;width:2.75rem;height:2.75rem;background:var(--ink);border:1px solid var(--ink);color:var(--paper);
+  font-size:0;border-radius:50%;cursor:pointer;touch-action:manipulation;transition:background .2s,color .2s,transform .2s}
+.menu-btn::before{content:'☰';font-size:1.25rem;line-height:1}
+.menu-btn[aria-expanded="true"]::before{content:'×';font-size:1.55rem}
+.menu-btn:hover{background:var(--gold-ink);border-color:var(--gold-ink);transform:rotate(4deg)}
 @media (max-width:1040px){
   .menu-btn{display:inline-block}
   .masthead .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;row-gap:.35rem}
@@ -125,8 +126,8 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
   #mainnav{grid-column:1 / -1}
   #mainnav{flex-basis:100%;display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
   #mainnav.is-open{grid-template-rows:1fr}
-  #mainnav .nav-links{overflow:hidden;min-height:0;flex-direction:column;align-items:stretch;gap:0;
-    border-top:1px solid var(--rule);padding-top:.3rem}
+  #mainnav .nav-links{overflow:hidden;min-height:0;flex-direction:column;align-items:stretch;gap:.12rem;
+    border-top:1px solid var(--rule);padding: .55rem 0 .35rem}
   #mainnav.is-open .nav-links a{animation:rise .4s var(--ease) both}
   #mainnav.is-open .nav-links li:nth-child(2) a{animation-delay:.03s}
   #mainnav.is-open .nav-links li:nth-child(3) a{animation-delay:.06s}
@@ -136,8 +137,8 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
   #mainnav.is-open .nav-links li:nth-child(7) a{animation-delay:.18s}
   #mainnav.is-open .nav-links li:nth-child(8) a{animation-delay:.21s}
   #mainnav.is-open .nav-links li:nth-child(9) a{animation-delay:.24s}
-  .nav-links a{padding:.8rem .15rem;border-radius:0}
-  .nav-links a.nav-cta{margin:.4rem 0 .6rem;width:fit-content;border-radius:999px;padding:.6rem 1rem}
+  .nav-links a{display:block;padding:.56rem .15rem;border-radius:0;line-height:1.2}
+  .nav-links a.nav-cta{margin:.55rem 0 .15rem;width:fit-content;border-radius:999px;padding:.6rem 1rem}
 }
 
 /* ---- status ---- */

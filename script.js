@@ -13,7 +13,8 @@
     function set(open){
       btn.setAttribute('aria-expanded',String(open));
       nav.classList.toggle('is-open',open);
-      btn.textContent=open?closeLabel:openLabel;
+      btn.setAttribute('aria-label',open?closeLabel:openLabel);
+      btn.title=open?closeLabel:openLabel;
       document.body.classList.toggle('nav-open',open&&mobile.matches);
       syncInert();
     }

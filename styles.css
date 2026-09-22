@@ -27,7 +27,7 @@
   --serif:'Newsreader',Georgia,serif;
   --sans:'Archivo',system-ui,sans-serif;
   --gutter:clamp(1.1rem,3vw,2rem);
-  --wrap:1160px;
+  --wrap:1320px;
   --radius:22px;
   --radius-sm:14px;
   --shadow:0 1px 1px #1418200a,0 18px 40px -24px #14182040;
@@ -42,7 +42,6 @@
 .page-events{--paper:#f3f0e8;--paper-2:#e8e0d0}
 .page-contact{--paper:#f3f0e8;--paper-2:#e8e1d2}
 .page-english{--paper:#f4f1eb;--paper-2:#e8e2d4}
-.page-shop{--wrap:1320px}
 
 *{box-sizing:border-box}
 html{overflow-x:hidden;scroll-behavior:smooth}

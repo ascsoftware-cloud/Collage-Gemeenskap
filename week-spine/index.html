@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="af">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8">
+<title>Collage Gemeenskapskerk, Elarduspark</title>
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:300 700;font-display:swap;
+  src:url('fonts/newsreader-latin-wght-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:300 700;font-display:swap;
+  src:url('fonts/newsreader-latin-wght-italic.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:300 700;font-display:swap;
+  src:url('fonts/newsreader-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-display:swap;
+  src:url('fonts/archivo-latin-wght-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-display:swap;
+  src:url('fonts/archivo-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{
+  --paper:#f5f1e8; --paper-2:#ece5d6; --paper-3:#e3dac6;
+  --ink:#101a2c; --ink-2:#39435a; --muted:#5d6779;
+  --gold:#c9a24c; --gold-ink:#7d5c14;
+  --rule:#101a2c24; --rule-strong:#101a2c4d;
+  --serif:'Newsreader',Georgia,serif;
+  --sans:'Archivo',system-ui,sans-serif;
+  --gutter:1.5rem; --wrap:1280px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;
+  overflow-x:hidden;-webkit-tap-highlight-color:rgba(16,26,44,.15)}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.018em;text-wrap:balance;margin:0}
+:where(a,button,[tabindex]):focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+[id]{scroll-margin-top:4rem}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:var(--gutter);top:-4rem;z-index:60;background:var(--ink);color:var(--paper);
+  padding:.7rem 1.2rem;font-size:.85rem;font-weight:600;text-decoration:none;transition:top .15s}
+.skip:focus{top:.6rem}
+.eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);font-weight:600;margin:0}
+
+.note{background:var(--paper-3);border-bottom:1px solid var(--rule);font-size:.76rem;color:var(--ink-2)}
+.note .wrap{padding-block:.7rem}
+.note b{color:var(--ink);font-weight:600}
+
+/* ---- masthead: dense and typographic, no photo hero ---- */
+.masthead{border-bottom:1px solid var(--rule-strong)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
+.brand img{width:40px;height:40px;object-fit:contain;flex:0 0 auto}
+.brand .n{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.05;letter-spacing:-.025em}
+.brand .p{display:block;font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.nav-links{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.nav-links a{color:var(--ink-2);text-decoration:none;padding-block:.3rem;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid var(--rule-strong);color:var(--ink);font:inherit;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.5rem .9rem;
+  cursor:pointer;touch-action:manipulation}
+.menu-btn:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:980px){
+  .menu-btn{display:inline-block}
+  .masthead .wrap{flex-wrap:wrap;row-gap:.6rem}
+  #mainnav{flex-basis:100%;display:none}
+  #mainnav.is-open{display:block}
+  .nav-links{flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+  .nav-links li{border-bottom:1px solid var(--rule)}
+  .nav-links li:last-child{border-bottom:0}
+  .nav-links a{display:block;padding:.8rem .1rem}
+}
+
+/* ---- status line: what is happening right now ---- */
+.status{border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+.status .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:1rem 2rem;
+  padding-block:.7rem;flex-wrap:wrap;font-size:.78rem}
+.status .today{color:var(--muted);letter-spacing:.04em}
+.status .next{font-weight:600;letter-spacing:.02em}
+.status .next b{font-variant-numeric:tabular-nums}
+.status a{color:var(--gold-ink);text-decoration:none;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;font-size:.7rem;border-bottom:1px solid var(--gold);padding-bottom:1px}
+.status a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---- the week rail: the spine of the page ---- */
+.week{padding-block:2.6rem 0}
+.week-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.week-head h1{font-size:clamp(2rem,1.4rem + 2.6vw,3.4rem);line-height:1;max-width:16ch}
+.week-head h1 em{font-style:italic;color:var(--gold-ink)}
+.week-head p{color:var(--muted);max-width:34ch;margin:0;font-size:.9rem}
+.rail{display:grid;grid-template-columns:1.9fr repeat(6,1fr);gap:1px;background:var(--rule-strong);
+  border:1px solid var(--rule-strong)}
+.day{background:var(--paper);padding:1rem .9rem 1.2rem;display:flex;flex-direction:column;min-height:270px}
+.day.sun{background:var(--paper-2);padding:1.3rem 1.3rem 1.5rem}
+.day.is-today{background:var(--ink)}
+.day.is-today .d-name,.day.is-today .slot .t,.day.is-today .slot .w{color:var(--paper)}
+.day.is-today .d-num{color:#8d99ad}
+.day.is-today .slot{border-color:#f5f1e829}
+.day.is-today .mark{color:var(--gold)}
+.d-top{display:flex;align-items:baseline;justify-content:space-between;gap:.4rem;
+  border-bottom:1px solid var(--rule-strong);padding-bottom:.5rem;margin-bottom:.7rem}
+.d-name{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+.day.sun .d-name{font-size:.82rem}
+.d-num{font-family:var(--serif);font-size:1.1rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.mark{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold-ink);display:none}
+.day.is-today .mark{display:block}
+.slot{border-top:1px solid var(--rule);padding-block:.65rem;text-decoration:none;color:inherit;display:block;
+  transition:padding-left .14s}
+.slot:first-of-type{border-top:0;padding-top:0}
+.slot:hover{padding-left:.3rem}
+.slot .t{font-family:var(--serif);font-size:1.45rem;line-height:1;font-variant-numeric:tabular-nums;
+  display:block;color:var(--ink)}
+.day.sun .slot .t{font-size:2.15rem}
+.slot .w{display:block;font-size:.73rem;color:var(--muted);margin-top:.28rem;line-height:1.35}
+.day.sun .slot .w{font-size:.82rem}
+.day .quiet{font-size:.76rem;color:var(--muted);font-style:italic;margin:.2rem 0 0;font-family:var(--serif)}
+@media (max-width:980px){
+  .rail{grid-template-columns:1fr 1fr}
+  .day{min-height:0}
+  .day.sun{grid-column:1/-1}
+}
+@media (max-width:520px){
+  .rail{grid-template-columns:1fr}
+  .day.sun{grid-column:auto}
+}
+
+/* ---- claim: typographic, no image ---- */
+.claim{padding-block:4.5rem 4rem;border-bottom:1px solid var(--rule-strong);margin-top:3rem}
+.claim .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:end}
+.claim h2{font-size:clamp(2.1rem,1.4rem + 3.2vw,4rem);line-height:1.02;max-width:13ch}
+.claim h2 em{font-style:italic}
+.claim .side p{color:var(--ink-2);margin:0 0 .9rem;max-width:42ch;font-size:.95rem}
+@media (max-width:880px){.claim .wrap{grid-template-columns:1fr;gap:1.6rem}.claim{padding-block:3rem 2.8rem}}
+
+/* ---- evidence: uneven photo row with real captions ---- */
+.evidence{padding-block:3rem}
+/* Two columns, not three. Three equal-row figures of unequal height left a dead column on the
+   right; stacking the two shorter ones lets the tall figure's height be absorbed instead. */
+.ev-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:1.5rem 2rem;align-items:start}
+.ev-stack{display:flex;flex-direction:column;gap:1.5rem}
+.ev figure{margin:0}
+.ev img{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule)}
+.ev.tall img{aspect-ratio:4/3}
+.ev figcaption{font-size:.78rem;color:var(--muted);margin-top:.6rem;line-height:1.45;max-width:38ch}
+.ev figcaption b{color:var(--ink);font-weight:600;display:block;font-size:.82rem;margin-bottom:.15rem}
+@media (max-width:880px){.ev-grid{grid-template-columns:1fr;gap:1.8rem}}
+
+/* ---- doors: numbered editorial rows ---- */
+.doors{padding-block:2.5rem 1rem}
+.doors .hd{border-bottom:1px solid var(--rule-strong);padding-bottom:.9rem;margin-bottom:0}
+.doors h2{font-size:clamp(1.6rem,1.25rem + 1.3vw,2.2rem);margin-top:.6rem}
+.door{display:grid;grid-template-columns:4rem 1fr 1.1fr auto;gap:1.5rem;align-items:baseline;
+  padding-block:1.5rem;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;
+  transition:background-color .15s,padding-left .15s}
+.door:hover{background:var(--paper-2);padding-left:.8rem}
+.door .no{font-family:var(--serif);font-size:1.5rem;color:var(--gold-ink);font-variant-numeric:tabular-nums}
+.door h3{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.08}
+.door p{color:var(--muted);font-size:.87rem;margin:0;max-width:40ch}
+.door .go{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-ink);white-space:nowrap}
+@media (max-width:880px){
+  .door{grid-template-columns:2.5rem 1fr;gap:.4rem 1rem;padding-block:1.25rem}
+  .door .no{grid-row:1/3;font-size:1.2rem}
+  .door p{grid-column:2}
+  .door .go{grid-column:2;margin-top:.4rem}
+}
+
+/* ---- the one dark block: giving and contact ---- */
+.close{background:var(--ink);color:var(--paper);margin-top:3rem}
+.close .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;padding-block:3.5rem}
+.close h2{font-size:clamp(1.8rem,1.4rem + 1.7vw,2.6rem);line-height:1.08;max-width:16ch;color:var(--paper)}
+.close p{color:#b9c1cf;margin:1rem 0 1.6rem;max-width:40ch;font-size:.95rem}
+.btn{display:inline-block;background:var(--gold);color:#241a02;font-weight:700;font-size:.84rem;
+  letter-spacing:.04em;padding:.8rem 1.7rem;text-decoration:none;touch-action:manipulation;
+  transition:background-color .15s}
+.btn:hover{background:#dcb968}
+.close .contact{border-left:1px solid #f5f1e82e;padding-left:3rem}
+.close .contact h3{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#8d99ad;
+  font-family:var(--sans);font-weight:600;margin-bottom:.9rem}
+.close .contact p{color:var(--paper);margin:0 0 .45rem;font-size:.95rem}
+.close .contact a{color:var(--paper);text-decoration:none;border-bottom:1px solid #f5f1e84d}
+.close .contact a:hover{border-bottom-color:var(--gold)}
+@media (max-width:880px){
+  .close .wrap{grid-template-columns:1fr;gap:2.2rem;padding-block:2.6rem}
+  .close .contact{border-left:0;border-top:1px solid #f5f1e82e;padding-left:0;padding-top:1.8rem}
+}
+
+/* ---- footer ---- */
+.site-foot{background:var(--ink);color:#8d99ad;border-top:1px solid #f5f1e81f;font-size:.78rem}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.5rem}
+.site-foot a{color:#8d99ad;text-decoration:none}
+.site-foot a:hover{color:var(--paper)}
+.site-foot ul{display:flex;gap:1.3rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Spring na hoofinhoud</a>
+
+<div class="note">
+  <div class="wrap"><b>Konsep-ontwerp.</b> Foto’s en die embleem is Collage se eie, van collage.org.za. Net die Sondagtye is werklik; die weeksdae, gebeure en teks is plekhouers wat die gemeente moet bevestig.</div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#main">
+      <img src="images/logo.png" alt="" width="40" height="40" aria-hidden="true">
+      <span>
+        <span class="n" translate="no">Collage</span>
+        <span class="p">Gemeenskapskerk, Elarduspark</span>
+      </span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Kieslys</button>
+    <nav id="mainnav" aria-label="Hoofkieslys">
+      <ul class="nav-links">
+        <li><a href="#week">Die Week</a></li>
+        <li><a href="#deure">Bedieninge</a></li>
+        <li><a href="#english" lang="en">English</a></li>
+        <li><a href="#gee">Gee</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="status">
+  <div class="wrap">
+    <span class="today" id="today-line">Elarduspark, Pretoria</span>
+    <span class="next">Volgende diens: <b>Sondag 09:00</b></span>
+    <a href="#gee">Gee ’n bydrae</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="week wrap" id="week" aria-labelledby="week-h">
+    <div class="week-head">
+      <h1 id="week-h">Ons is oop <em>elke dag</em> van die week.</h1>
+      <p>Die meeste kerke wys jou Sondag. Hier is al sewe dae, met wat waar en wanneer gebeur.</p>
+    </div>
+
+    <div class="rail">
+      <div class="day sun" data-day="0">
+        <div class="d-top"><span class="d-name">Sondag</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">01</span></div>
+        <a class="slot" href="#week"><span class="t">09:00</span><span class="w">Erediens, met kinder- en jeugprogramme</span></a>
+        <a class="slot" href="#english" id="english" lang="en"><span class="t">11:00</span><span class="w">English Service</span></a>
+        <a class="slot" href="#week"><span class="t">17:00</span><span class="w">Aand-erediens</span></a>
+      </div>
+      <div class="day" data-day="1">
+        <div class="d-top"><span class="d-name">Ma</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">02</span></div>
+        <a class="slot" href="#deure"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
+        <a class="slot" href="#deure"><span class="t">14:00</span><span class="w">Mediese Kliniek</span></a>
+      </div>
+      <div class="day" data-day="2">
+        <div class="d-top"><span class="d-name">Di</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">03</span></div>
+        <a class="slot" href="#deure"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
+        <a class="slot" href="https://kleingroepe.collage.org.za"><span class="t">18:30</span><span class="w">Kleingroepe deur Elarduspark</span></a>
+      </div>
+      <div class="day" data-day="3">
+        <div class="d-top"><span class="d-name">Wo</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">04</span></div>
+        <a class="slot" href="#deure"><span class="t">08:00</span><span class="w">Mediese Kliniek</span></a>
+        <a class="slot" href="#deure"><span class="t">10:00</span><span class="w">Koffiewinkel oop</span></a>
+      </div>
+      <div class="day" data-day="4">
+        <div class="d-top"><span class="d-name">Do</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">05</span></div>
+        <a class="slot" href="#deure"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
+        <a class="slot" href="https://kleingroepe.collage.org.za"><span class="t">18:30</span><span class="w">Kleingroepe</span></a>
+      </div>
+      <div class="day" data-day="5">
+        <div class="d-top"><span class="d-name">Vr</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">06</span></div>
+        <a class="slot" href="#deure"><span class="t">10:00</span><span class="w">Koffiewinkel, oop vir almal</span></a>
+      </div>
+      <div class="day" data-day="6">
+        <div class="d-top"><span class="d-name">Sa</span><span class="mark">Vandag</span><span class="d-num" aria-hidden="true">07</span></div>
+        <p class="quiet">Stil, tensy daar ’n gemeente-geleentheid is.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="claim" aria-labelledby="claim-h">
+    <div class="wrap">
+      <h2 id="claim-h">Meer as ’n <em>Sondag-adres.</em></h2>
+      <div class="side">
+        <p>’n Moderne Afrikaanse gemeente met die Bybel as fondament. Die terrein in Elarduspark loop deur die week: berading, mediese sorg, kleingroepe en ’n koffiewinkel wat vir enigeen oop is.</p>
+        <p>Jy hoef nie lid te wees om deur enige van hierdie deure te loop nie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="evidence wrap" aria-labelledby="ev-h">
+    <h2 id="ev-h" class="eyebrow">Op die terrein</h2>
+    <div class="ev-grid">
+      <figure class="ev tall">
+        <img src="images/gathering.jpg" alt="Gemeentelede wat ná die diens in die tuin gesels" width="768" height="432" loading="lazy" decoding="async">
+        <figcaption><b>Ná die oggenddiens</b>Die meeste Sondae loop die tuin vol en bly dit so tot ná middagete.</figcaption>
+      </figure>
+      <div class="ev-stack">
+        <figure class="ev">
+          <img src="images/coffee.jpg" alt="Mense by die koffiewinkel op die kerkterrein" width="768" height="432" loading="lazy" decoding="async">
+          <figcaption><b>Die koffiewinkel</b>Deur die week oop, en nie net vir lidmate nie.</figcaption>
+        </figure>
+        <figure class="ev">
+          <img src="images/garden.jpg" alt="Lugfoto van die tuin en fontein by Collage" width="768" height="432" loading="lazy" decoding="async">
+          <figcaption><b>Die tuin en fontein</b>Waar die kleingroepe in die somer buite bymekaarkom.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="doors wrap" id="deure" aria-labelledby="deure-h">
+    <div class="hd">
+      <p class="eyebrow">Vyf Deure</p>
+      <h2 id="deure-h">Waar mense inkom</h2>
+    </div>
+    <a class="door" href="#week">
+      <span class="no" aria-hidden="true">01</span>
+      <h3>Eredienste</h3>
+      <p>Drie op ’n Sondag, met kinder- en jeugprogramme in die oggend.</p>
+      <span class="go">Tye &rarr;</span>
+    </a>
+    <a class="door" href="#kontak">
+      <span class="no" aria-hidden="true">02</span>
+      <h3>Berading Sentrum</h3>
+      <p>Professionele berading vir individue, paartjies en gesinne.</p>
+      <span class="go">Bespreek &rarr;</span>
+    </a>
+    <a class="door" href="#kontak">
+      <span class="no" aria-hidden="true">03</span>
+      <h3>Mediese Kliniek</h3>
+      <p>Basiese mediese sorg vir die gemeente en vir Elarduspark.</p>
+      <span class="go">Ure &rarr;</span>
+    </a>
+    <a class="door" href="https://kleingroepe.collage.org.za">
+      <span class="no" aria-hidden="true">04</span>
+      <h3>Kleingroepe</h3>
+      <p>Groepe deur die hele voorstad, deur die week in mense se huise.</p>
+      <span class="go">Vind een &rarr;</span>
+    </a>
+    <a class="door" href="#gee">
+      <span class="no" aria-hidden="true">05</span>
+      <h3>Gee &amp; Winkel</h3>
+      <p>Tiendes en bydraes aanlyn, of ondersteun ’n spesifieke bediening.</p>
+      <span class="go">Gee &rarr;</span>
+    </a>
+  </section>
+
+</main>
+
+<section class="close" id="gee" aria-labelledby="gee-h">
+  <div class="wrap">
+    <div>
+      <h2 id="gee-h">Die kliniek en die berading loop op bydraes.</h2>
+      <p>Nie net die Sondagdiens nie. As jy wil help dat die deure deur die week oop bly, is dit waar dit heen gaan.</p>
+      <a class="btn" href="#gee">Gee ’n bydrae</a>
+    </div>
+    <div class="contact" id="kontak">
+      <h3>Kontak</h3>
+      <p>Elarduspark, Pretoria</p>
+      <p><a href="tel:+27123451181">012 345 1181</a></p>
+      <p><a href="https://kleingroepe.collage.org.za">kleingroepe.collage.org.za</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>&copy; 2026 Collage Gemeenskapskerk</span>
+    <ul>
+      <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
+      <li><a href="https://x.com/collagegemeente">X</a></li>
+      <li><span>Konsep deur ASC Software</span></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
+  if(btn&&nav){
+    function set(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('is-open',o);}
+    btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
+    nav.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus();}
+    });
+  }
+  // Mark today in the rail and write the date. Intl, not a hardcoded format.
+  // Without JS the rail still reads correctly, it just has no "vandag" marker.
+  try{
+    var now=new Date(), idx=now.getDay(); // 0 = Sondag
+    var col=document.querySelector('.day[data-day="'+idx+'"]');
+    if(col){
+      col.classList.add('is-today');
+      col.setAttribute('aria-current','date');
+    }
+    var line=document.getElementById('today-line');
+    if(line){
+      line.textContent='Vandag is '+new Intl.DateTimeFormat('af-ZA',
+        {weekday:'long',day:'numeric',month:'long'}).format(now);
+    }
+    // Next service: Sunday 09:00, or today's remaining slots if it is Sunday.
+    var next=document.querySelector('.next b');
+    if(next&&idx===0){ next.textContent='vandag 09:00'; }
+  }catch(e){}
+})();
+</script>
+
+</body>
+</html>

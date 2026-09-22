@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="af">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1728">
+<title>Collage Gemeenskapskerk, Elarduspark</title>
+<link rel="preload" href="fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Self-hosted: no third-party request, works offline, nothing leaks to Google on page load. */
+@font-face{font-family:'Literata';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('fonts/literata-latin-wght-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Literata';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('fonts/literata-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;
+  src:url('fonts/work-sans-latin-400-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;
+  src:url('fonts/work-sans-latin-500-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;
+  src:url('fonts/work-sans-latin-600-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;
+  src:url('fonts/work-sans-latin-ext-400-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;
+  src:url('fonts/work-sans-latin-ext-500-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;
+  src:url('fonts/work-sans-latin-ext-600-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{
+  --ink:#0d1728; --ink-deep:#080e1a; --paper:#f3ede1;
+  --gold:#c9a24c; --gold-bright:#dcb968; --muted:#8fa0ba; --photo-ink:#d7dce6;
+  --rule:#f3ede11c; --rule-strong:#f3ede130;
+  --focus:#dcb968;
+  --serif:'Literata',Georgia,serif;
+  --sans:'Work Sans',system-ui,sans-serif;
+  --gutter:1.5rem; --wrap:1180px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:var(--sans);line-height:1.6;overflow-x:hidden;
+  -webkit-tap-highlight-color:rgba(220,185,104,.25);
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;text-wrap:balance}
+:where(a,button,[tabindex]):focus-visible{
+  outline:2px solid var(--focus);outline-offset:3px;border-radius:2px;
+}
+[id]{scroll-margin-top:5.5rem}
+
+.skip{position:absolute;left:var(--gutter);top:-4rem;z-index:60;background:var(--gold);color:var(--ink-deep);
+  padding:.7rem 1.2rem;border-radius:999px;font-size:.85rem;font-weight:600;text-decoration:none;transition:top .15s}
+.skip:focus{top:.75rem}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+
+/* mockup disclaimer */
+.note{background:var(--ink-deep);border-bottom:1px solid var(--rule);font-size:.8rem;color:var(--muted)}
+.note .wrap{padding-block:.9rem}
+.note b{color:var(--paper);font-weight:500}
+
+/* nav */
+.site-head{position:sticky;top:0;z-index:20;background:rgba(8,14,26,.88);backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:.65rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand .chip{width:38px;height:38px;border-radius:50%;background:var(--paper);display:grid;place-items:center;
+  overflow:hidden;flex:0 0 auto}
+.brand .chip img{width:28px;height:28px;object-fit:contain}
+.brand .word{font-family:var(--serif);font-weight:600;font-size:1.1rem;letter-spacing:-.02em}
+.nav-links{display:flex;gap:1.6rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:inherit;padding-block:.35rem;transition:color .15s}
+.nav-links a:hover{color:var(--gold-bright)}
+
+/* Mobile disclosure. A real button with aria-expanded, not a label hack, so the state is
+   announced and Escape closes it. Below 880px the links were previously unreachable. */
+.menu-btn{display:none;background:none;border:1px solid var(--rule-strong);color:var(--paper);
+  font:inherit;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.5rem .9rem;border-radius:999px;cursor:pointer;touch-action:manipulation}
+.menu-btn:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+@media (max-width:880px){
+  .menu-btn{display:inline-block;order:3}
+  .site-head .wrap{flex-wrap:wrap;row-gap:.6rem}
+  .site-head .btn-primary{order:2;margin-left:auto}
+  #mainnav{order:4;flex-basis:100%;display:none}
+  #mainnav.is-open{display:block}
+  .nav-links{flex-direction:column;gap:0;border-top:1px solid var(--rule);padding-top:.4rem}
+  .nav-links li{border-bottom:1px solid var(--rule)}
+  .nav-links li:last-child{border-bottom:0}
+  .nav-links a{display:block;padding:.85rem .2rem;font-size:.78rem}
+}
+
+.btn{font-size:.84rem;font-weight:500;padding:.72rem 1.6rem;border-radius:999px;display:inline-block;
+  text-decoration:none;touch-action:manipulation;white-space:nowrap;transition:background-color .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--gold);color:var(--ink-deep)}
+.btn-primary:hover{background:var(--gold-bright)}
+/* Backed, not bare: a bare border over a photo can land at 1:1 wherever the image goes light. */
+.btn-ghost{border:1px solid rgba(243,237,225,.55);color:var(--paper);background:rgba(8,14,26,.5);
+  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.btn-ghost:hover{border-color:var(--paper);background:rgba(8,14,26,.72)}
+.btn-dark{background:var(--ink-deep);color:var(--paper)}
+.btn-dark:hover{background:#101a2e}
+.btn-sm{font-size:.76rem;padding:.55rem 1.25rem}
+
+/* hero */
+.hero{position:relative;min-height:min(88dvh,700px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+/* Scrim ramps hard through the text band. Measured against the photo's own pixels, not the navy
+   token: the sky behind the headline is near-white, so a light scrim leaves the text at ~2:1. */
+.hero .scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,
+    rgba(8,14,26,.55) 0%,
+    rgba(8,14,26,.38) 18%,
+    rgba(8,14,26,.64) 44%,
+    rgba(8,14,26,.86) 64%,
+    rgba(8,14,26,.95) 86%,
+    var(--ink-deep) 100%)}
+/* Localised wash behind the text block only. Darkening the whole scrim enough to carry the 12px
+   eyebrow would have flattened the sky; this keeps the photo open and guarantees the text band. */
+.hero-content{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:6rem var(--gutter) 3rem;text-align:center;
+  background:radial-gradient(ellipse 125% 95% at 50% 62%,rgba(8,14,26,.62) 0%,rgba(8,14,26,.4) 46%,transparent 74%)}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);font-weight:600}
+.hero h1{font-size:clamp(2.3rem,1.6rem + 3.1vw,4.1rem);line-height:1.04;margin:1rem 0 1.1rem}
+.hero h1 em{font-style:italic;color:var(--gold-bright)}
+.hero .lead{color:var(--paper);opacity:.88;max-width:40ch;margin:0 auto 2rem;font-size:1.05rem}
+.hero-ctas{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
+
+.ticker{position:relative;z-index:2;border-top:1px solid rgba(243,237,225,.18);background:rgba(8,14,26,.6)}
+.ticker .wrap{display:flex;align-items:center;justify-content:center;gap:.55rem;padding-block:.85rem;
+  font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;flex-wrap:wrap}
+.ticker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-bright);flex:0 0 auto}
+.ticker b{color:var(--paper);font-weight:500}
+
+/* service times */
+.times{border-bottom:1px solid var(--rule)}
+.times ul{max-width:var(--wrap);margin:0 auto;padding:0;list-style:none;display:flex}
+.times li{flex:1;padding:1.6rem 1rem;border-right:1px solid var(--rule);text-align:center}
+.times li:last-child{border-right:0}
+.times .t{font-family:var(--serif);font-size:2.4rem;font-weight:400;line-height:1;font-variant-numeric:tabular-nums}
+.times .l{font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.55rem}
+@media (max-width:560px){.times .t{font-size:1.9rem}.times li{padding:1.2rem .5rem}}
+
+/* welcome */
+.welcome{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--rule)}
+.welcome .copy{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.welcome h2{font-size:clamp(1.7rem,1.3rem + 1.5vw,2.4rem);line-height:1.1;margin:0 0 1.1rem}
+.welcome p{color:var(--muted);max-width:46ch;margin:0 0 1rem}
+.welcome .photo{position:relative;min-height:340px}
+.welcome .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.inline-link{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);
+  text-decoration:none;display:inline-block;margin-top:.5rem;border-bottom:1px solid transparent;transition:border-color .15s}
+.inline-link:hover{border-bottom-color:var(--gold-bright)}
+@media (max-width:880px){
+  .welcome{grid-template-columns:1fr}
+  .welcome .copy{padding:2.8rem var(--gutter)}
+  .welcome .photo{order:-1;min-height:240px}
+}
+
+/* ministries bento */
+.ministries{max-width:var(--wrap);margin:0 auto;padding:3.5rem var(--gutter) 0}
+.sec-head{text-align:center;max-width:52ch;margin:0 auto 2.2rem}
+.sec-head h2{font-size:clamp(1.7rem,1.3rem + 1.3vw,2.2rem);margin:.8rem 0 .7rem}
+.sec-head p{color:var(--muted);margin:0}
+.bento{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:repeat(2,220px);gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
+.tile{position:relative;overflow:hidden;padding:1.6rem;display:flex;flex-direction:column;justify-content:flex-end;
+  background:var(--ink-deep);text-decoration:none;transition:background-color .18s}
+.tile:hover{background:#101a2e}
+.tile.feature{grid-row:1/3;background:transparent}
+.tile.feature>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.tile.feature::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(8,14,26,.05),rgba(8,14,26,.9))}
+.tile.feature:hover::after{background:linear-gradient(180deg,rgba(8,14,26,.15),rgba(8,14,26,.94))}
+.tile .z{position:relative;z-index:2}
+.tile h3{font-size:1.45rem;margin:0 0 .4rem}
+.tile.feature h3{font-size:1.8rem}
+.tile p{color:var(--muted);font-size:.85rem;line-height:1.5;max-width:34ch;margin:0}
+.tile.feature p{color:var(--photo-ink)}
+.tile .more{margin-top:.7rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright)}
+@media (max-width:880px){
+  .bento{grid-template-columns:1fr;grid-template-rows:none}
+  .tile{min-height:170px}
+  .tile.feature{grid-row:auto;min-height:260px}
+}
+
+/* community band */
+.band{position:relative;min-height:420px;display:flex;align-items:flex-end;margin-top:3.5rem}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+/* Holds ~0.85 through the bottom half, where the three-line headline actually sits. The old
+   ramp went light at 58% and left the top two lines at 1.6:1 over the bright part of the crowd. */
+.band::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(0deg,rgba(8,14,26,.95) 0%,rgba(8,14,26,.88) 34%,
+    rgba(8,14,26,.72) 52%,rgba(8,14,26,.3) 76%,rgba(8,14,26,.06) 100%)}
+.band .wrap{position:relative;z-index:2;padding-block:3rem;width:100%}
+.band h2{font-size:clamp(1.7rem,1.3rem + 1.9vw,2.7rem);max-width:20ch;line-height:1.12;margin:0}
+
+/* events list */
+.events{max-width:var(--wrap);margin:0 auto;padding:3.5rem var(--gutter) 0}
+.events .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  border-bottom:1px solid var(--rule-strong);padding-bottom:1rem;margin-bottom:.5rem}
+.events .head h2{font-size:clamp(1.5rem,1.2rem + 1.1vw,2rem);margin:.6rem 0 0}
+.events ul{list-style:none;margin:0;padding:0}
+.events li{border-bottom:1px solid var(--rule)}
+.events a{display:grid;grid-template-columns:7rem 1fr auto;gap:1.5rem;align-items:center;
+  padding:1.4rem .25rem;text-decoration:none;transition:background-color .15s,padding-left .15s}
+.events a:hover{background:rgba(243,237,225,.035);padding-left:.9rem}
+.events .when{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);
+  font-variant-numeric:tabular-nums}
+.events .what{font-family:var(--serif);font-size:1.25rem;font-weight:500;min-width:0}
+.events .what span{display:block;font-family:var(--sans);font-size:.85rem;color:var(--muted);
+  margin-top:.2rem;overflow-wrap:break-word}
+.events .arrow{color:var(--muted);font-size:1.1rem}
+@media (max-width:640px){
+  .events a{grid-template-columns:1fr;gap:.45rem;padding-block:1.15rem}
+  .events .arrow{display:none}
+}
+
+/* give */
+/* Floats over the section boundary rather than sitting flush in the stack, so one element
+   in the page carries depth instead of every band being a flat slab. */
+.give-wrap{max-width:var(--wrap);margin:3.5rem auto -2.6rem;padding-inline:var(--gutter);position:relative;z-index:3}
+.give{background:var(--gold);color:var(--ink-deep);padding:2.1rem 2.3rem;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:1.2rem;box-shadow:0 20px 44px -14px rgba(201,162,76,.38)}
+.give h2{font-size:1.65rem;margin:0;color:var(--ink-deep)}
+.give p{font-size:.92rem;opacity:.82;margin:.25rem 0 0;max-width:42ch}
+
+/* footer */
+.site-foot{border-top:1px solid var(--rule);margin-top:4rem}
+.site-foot .wrap{padding-block:3.5rem 3rem;display:flex;justify-content:space-between;gap:2.5rem;flex-wrap:wrap}
+.site-foot h2,.site-foot h3{font-size:1.1rem;margin:0 0 .85rem}
+.site-foot p{color:var(--muted);font-size:.88rem;margin:0 0 .45rem}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:.45rem}
+.site-foot a{color:var(--muted);font-size:.88rem;text-decoration:none;transition:color .15s}
+.site-foot a:hover{color:var(--gold-bright)}
+.colophon{border-top:1px solid var(--rule);font-size:.78rem;color:var(--muted)}
+.colophon .wrap{padding-block:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Spring na hoofinhoud</a>
+
+<div class="note">
+  <div class="wrap"><b>Konsep-ontwerp.</b> Foto’s en die embleem is Collage se eie, van collage.org.za. Teks en datums is plekhouers en moet deur die gemeente nagegaan word.</div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#main">
+      <span class="chip"><img src="images/logo.png" alt="" width="28" height="28" aria-hidden="true"></span>
+      <span class="word" translate="no">Collage</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Kieslys</button>
+    <nav id="mainnav" aria-label="Hoofkieslys">
+      <ul class="nav-links">
+        <li><a href="#oor">Oor Ons</a></li>
+        <li><a href="#bedieninge">Bedieninge</a></li>
+        <li><a href="#gebeure">Gebeure</a></li>
+        <li><a href="#english" lang="en">English</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#beplan">Beplan Jou Besoek</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-h">
+    <img src="images/hero.jpg" alt="Collage se kerkgebou en tuin, met palmbome teen ’n lae son" width="1024" height="576" fetchpriority="high" decoding="async">
+    <div class="scrim"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Elarduspark, Pretoria</p>
+      <h1 id="hero-h">Welkom by <em>Collage.</em></h1>
+      <p class="lead">’n Moderne Afrikaanse gemeente met die Bybel as fondament.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ghost" href="#english">Kyk Aanlyn</a>
+      </div>
+    </div>
+    <div class="ticker">
+      <div class="wrap">
+        <span class="dot" aria-hidden="true"></span>
+        <b>Kom kuier hierdie Sondag</b>
+        <span>09:00 Erediens &middot; 11:00 <span lang="en">English</span> &middot; 17:00 Aand</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="times" id="beplan" aria-label="Diens-tye op Sondag">
+    <ul>
+      <li><div class="t">09:00</div><div class="l">Erediens, Kinders &amp; Jeug</div></li>
+      <li id="english" lang="en"><div class="t">11:00</div><div class="l">English Service</div></li>
+      <li><div class="t">17:00</div><div class="l">Aand-erediens</div></li>
+    </ul>
+  </section>
+
+  <section class="welcome" id="oor" aria-labelledby="oor-h">
+    <div class="copy">
+      <h2 id="oor-h">’n Tuiste in Elarduspark, gebou vir die hele week.</h2>
+      <p>Van Sondag-eredienste tot berading, mediese sorg en kleingroepe. Collage is meer as ’n Sondag-adres. Ons terrein is deur die week oop vir die gemeenskap wat ons dien.</p>
+      <a class="inline-link" href="#bedieninge">Lees ons verhaal &rarr;</a>
+    </div>
+    <div class="photo">
+      <img src="images/garden.jpg" alt="Lugfoto van Collage se tuin en fontein" width="768" height="432" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <section class="ministries" id="bedieninge" aria-labelledby="bed-h">
+    <div class="sec-head">
+      <p class="eyebrow">Vyf Deure</p>
+      <h2 id="bed-h">Hoe Collage die week deur dien</h2>
+      <p>Elke deur hieronder is deur die week oop, nie net Sondae nie.</p>
+    </div>
+    <div class="bento">
+      <a class="tile feature" href="#kontak">
+        <img src="images/coffee.jpg" alt="" width="768" height="432" loading="lazy" decoding="async">
+        <span class="z">
+          <h3>Koffiewinkel &amp; Gemeenskap</h3>
+          <p>Kuier deur die week by ons koffiewinkel op die terrein. Oop vir almal.</p>
+          <span class="more">Meer &rarr;</span>
+        </span>
+      </a>
+      <a class="tile" href="#kontak"><span class="z">
+        <h3>Berading Sentrum</h3>
+        <p>Professionele berading vir individue, paartjies en gesinne.</p>
+        <span class="more">Bespreek ’n sessie &rarr;</span>
+      </span></a>
+      <a class="tile" href="#kontak"><span class="z">
+        <h3>Mediese Kliniek</h3>
+        <p>Basiese mediese sorg vir die gemeente en Elarduspark.</p>
+        <span class="more">Meer &rarr;</span>
+      </span></a>
+      <a class="tile" href="https://kleingroepe.collage.org.za"><span class="z">
+        <h3>Kleingroepe</h3>
+        <p>Vind ’n groep naby jou, deur die hele Elarduspark.</p>
+        <span class="more">Meer &rarr;</span>
+      </span></a>
+      <a class="tile" href="#gee"><span class="z">
+        <h3>Gee &amp; Tiende</h3>
+        <p>Veilig aanlyn, of ondersteun ’n spesifieke bediening.</p>
+        <span class="more">Meer &rarr;</span>
+      </span></a>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="band-h">
+    <img src="images/gathering.jpg" alt="" width="768" height="432" loading="lazy" decoding="async">
+    <div class="wrap">
+      <h2 id="band-h">Elke Sondag eindig met mense wat nie wil huis toe gaan nie.</h2>
+    </div>
+  </section>
+
+  <section class="events" id="gebeure" aria-labelledby="geb-h">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Hierdie Maand</p>
+        <h2 id="geb-h">Gebeure en boodskappe</h2>
+      </div>
+      <a class="inline-link" href="#gebeure">Volledige kalender &rarr;</a>
+    </div>
+    <ul>
+      <li><a href="#gebeure">
+        <span class="when"><time datetime="2026-09-21">21 Sep</time></span>
+        <span class="what">Fondament<span>Jongste boodskap, beskikbaar om aanlyn te kyk</span></span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="#gebeure">
+        <span class="when"><time datetime="2026-09-28">28 Sep</time></span>
+        <span class="what">Gemeente-ete<span>Ná die oggenddiens, op die terrein</span></span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="#gebeure">
+        <span class="when"><time datetime="2026-10-05">05 Okt</time></span>
+        <span class="what">Kleingroepe begin weer<span>Nuwe siklus, registrasie oop</span></span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="give-wrap" id="gee" aria-labelledby="gee-h">
+    <div class="give">
+      <div>
+        <h2 id="gee-h">Ondersteun die gemeente</h2>
+        <p>Veilig aanlyn, of by die deur op Sondag.</p>
+      </div>
+      <a class="btn btn-dark" href="#gee">Gee Nou</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot" id="kontak">
+  <div class="wrap">
+    <div>
+      <h2 translate="no">Collage.</h2>
+      <p>Elarduspark, Pretoria</p>
+      <p><a href="tel:+27123451181">012 345 1181</a></p>
+    </div>
+    <div>
+      <h3>Besoek</h3>
+      <ul>
+        <li><a href="#beplan">Diens-tye</a></li>
+        <li><a href="#gebeure">Gebeure</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Bedieninge</h3>
+      <ul>
+        <li><a href="#bedieninge">Berading Sentrum</a></li>
+        <li><a href="#bedieninge">Mediese Kliniek</a></li>
+        <li><a href="https://kleingroepe.collage.org.za">Kleingroepe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Volg Ons</h3>
+      <ul>
+        <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
+        <li><a href="https://x.com/collagegemeente">X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="colophon">
+    <div class="wrap">
+      <span>&copy; 2026 Collage Gemeenskapskerk</span>
+      <span>Konsep-ontwerp deur ASC Software</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.menu-btn'),
+      nav = document.getElementById('mainnav');
+  if (!btn || !nav) return;
+  function set(open){
+    btn.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('is-open', open);
+  }
+  btn.addEventListener('click', function(){
+    set(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  nav.addEventListener('click', function(e){
+    if (e.target.closest('a')) set(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){
+      set(false); btn.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

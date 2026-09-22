@@ -276,6 +276,32 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.018em;text-wr
 .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;margin-block:2.5rem}
 @media (max-width:700px){.photo-pair{grid-template-columns:1fr;gap:1.8rem}}
 
+/* ---- tinted background photo: a real photo behind a section, under a heavy paper
+   tint so body text keeps full contrast — texture, not a hero. Set per use with
+   style="--bg-img:url('images/x.jpg')" alongside this class. Used sparingly, not
+   on every page. ---- */
+.tinted-bg{
+  background-image:linear-gradient(rgba(245,241,232,.93),rgba(245,241,232,.93)),var(--bg-img);
+  background-size:cover;
+  background-position:center;
+}
+
+/* ---- app promo: cleaner, on-brand version of the two bare store badges on the live site ---- */
+.app-promo{padding-block:3rem;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+.app-promo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.8rem 2.5rem;flex-wrap:wrap}
+.app-promo h2{font-size:clamp(1.3rem,1.1rem + 1vw,1.7rem);max-width:22ch}
+.app-promo p{color:var(--muted);margin:.5rem 0 0;max-width:38ch;font-size:.9rem}
+.app-badges{display:flex;gap:.9rem;flex-wrap:wrap}
+.app-badge{display:inline-flex;align-items:center;gap:.7rem;background:var(--ink);color:var(--paper);
+  padding:.65rem 1.15rem;border-radius:var(--radius-sm);text-decoration:none;box-shadow:var(--shadow);
+  transition:transform .15s,box-shadow .15s}
+.app-badge:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px #101a2c4d}
+.app-badge svg{width:24px;height:24px;flex:0 0 auto;color:var(--gold)}
+.app-badge .txt{display:flex;flex-direction:column;line-height:1.2}
+.app-badge .txt small{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.app-badge .txt strong{font-size:.92rem;font-family:var(--sans);font-weight:700;letter-spacing:-.01em}
+@media (max-width:640px){.app-promo .wrap{flex-direction:column;align-items:flex-start}}
+
 /* ==================================================================
    Small-screen tightening — applies across every component above.
    ================================================================== */

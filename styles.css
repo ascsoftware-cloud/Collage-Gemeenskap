@@ -221,10 +221,10 @@ a.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .head-media img,.frame img,.split-photo img,.caption-split img,.shop-photo img{width:100%;display:block;transition:transform .7s var(--ease)}
 .head-media{aspect-ratio:4/3;margin:0}
 .head-media img{height:100%;object-fit:cover}
-.frame:hover img,.split-photo:hover img,.caption-split:hover img,.shop-photo:hover img,.head-media:hover img{transform:scale(1.045)}
+.frame:hover img,.split-photo:hover img,.shop-photo:hover img,.head-media:hover img{transform:scale(1.045)}
 .evidence{padding-block:3rem 1rem}
 .page-home .evidence{padding-top:5.4rem}
-.ev-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);gap:1.1rem 1.3rem;align-items:start;margin-top:1rem}
+.ev-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.1rem 1.3rem;align-items:start;margin-top:1rem}
 .ev-stack{display:flex;flex-direction:column;gap:1.1rem}
 .ev{margin:0}
 .ev.frame{background:color-mix(in srgb,white 48%,var(--paper));padding-bottom:.85rem}

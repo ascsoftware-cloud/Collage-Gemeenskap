@@ -2,7 +2,7 @@
 
 Concept redesign for [Collage Gemeenskapskerk](https://collage.org.za/), an Afrikaans congregation in Elarduspark, Pretoria. Client work delivered by ASC Software.
 
-**Status: concept, not production.** Copy, event dates, hours and contact details throughout the site are placeholders pending church review — each page carries a visible note saying so.
+**Status: concept, not production.** Copy, event dates, hours and contact details are still waiting on the church. The contact page opens the visitor's email app with a filled-in message, because this site has no form backend.
 
 ## Stack
 
@@ -29,7 +29,7 @@ fonts/, images/   Shared assets
 
 ## Design tokens
 
-Navy ink (`#101a2c`) on a warm paper ground (`#f5f1e8`), gold accent (`#c9a24c`), Newsreader (serif) paired with Archivo (sans). One dark block per page (the giving/contact CTA) for punctuation rather than a dark-everywhere register.
+Ink (`#141820`) on a warm paper ground (`#f3efe6`), gold accent (`#c6a15a`), Newsreader paired with Archivo. The header, type and footer are shared. Each page has its own layout so the inner pages are not the same template repeated. Motion is a short entrance and scroll reveal, and it switches off for reduced-motion.
 
 ## Next steps
 

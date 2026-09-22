@@ -3,26 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f5f1e8">
+<meta name="theme-color" content="#f3f0e8">
 <title>Kontak — Collage Gemeenskapskerk</title>
 <meta name="description" content="Kontak Collage Gemeenskapskerk in Elarduspark, Pretoria — algemene navrae, ligging en kantoorure.">
 <link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="page-contact">
 
 <a class="skip" href="#main">Spring na hoofinhoud</a>
 
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="40" height="40" aria-hidden="true">
+      <img src="images/logo.png" alt="" width="42" height="42">
       <span>
         <span class="n" translate="no">Collage</span>
         <span class="p">Gemeenskapskerk, Elarduspark</span>
       </span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Kieslys</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
     <nav id="mainnav" aria-label="Hoofkieslys">
       <ul class="nav-links">
         <li><a href="index.html">Tuis</a></li>
@@ -31,9 +34,9 @@
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
         <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
         <li><a href="winkel.html">Winkel</a></li>
         <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+        <li><a class="nav-cta" href="gee.html">Gee</a></li>
       </ul>
     </nav>
   </div>
@@ -41,77 +44,113 @@
 
 <main id="main">
 
-  <section class="contact-split wrap">
+  <section class="contact-layout wrap">
     <div>
-      <p class="eyebrow">Kontak &amp; Algemene Navrae</p>
+      <p class="eyebrow">Kontak</p>
       <h1>Ons is hier om jou te <em>help.</em></h1>
-      <p>Vir enigiets wat nie elders op die werf pas nie — algemene navrae, media-navrae, of net om hallo te sê.</p>
+      <p class="lede">Algemene navrae, media, of net om hallo te sê. Die vorm maak jou e-posprogram oop met die boodskap gereed — daar is nie ’n aparte posbus op hierdie werf nie.</p>
 
-      <div class="contact-grid">
-        <dl>
-          <dt>Adres</dt>
-          <dd>Collage Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat, Elarduspark, 0181</dd>
-          <dt>Telefoon</dt>
-          <dd><a href="tel:+27123451181">012 345 1181</a> (08:00–16:00)<br><a href="tel:+27660167668">066 016 7668</a> (08:00–16:00)</dd>
-          <dt>E-pos</dt>
-          <dd><a href="mailto:info@collage.org.za">info@collage.org.za</a></dd>
-          <dt>WhatsApp</dt>
-          <dd>Beskikbaar tydens kantoorure — skakel eers om die nommer te bevestig</dd>
-        </dl>
-        <dl>
-          <dt>Berading Sentrum</dt>
-          <dd><a href="berading.html">Besonderhede &amp; ure &rarr;</a></dd>
-          <dt>Mediese Kliniek</dt>
-          <dd><a href="kliniek.html">Besonderhede &amp; ure &rarr;</a></dd>
-          <dt>Kleingroepe</dt>
-          <dd><a href="https://kleingroepe.collage.org.za">kleingroepe.collage.org.za</a></dd>
-          <dt>Sosiale media</dt>
-          <dd><a href="https://facebook.com/collagegemeente">Facebook</a> &middot; <a href="https://x.com/collagegemeente">X</a></dd>
-        </dl>
-      </div>
+      <form class="enquiry" id="enquiry" novalidate>
+        <label class="field">
+          <span>Naam</span>
+          <input name="naam" type="text" autocomplete="name" required>
+        </label>
+        <label class="field">
+          <span>E-pos</span>
+          <input name="epos" type="email" autocomplete="email" inputmode="email" required>
+        </label>
+        <label class="field wide">
+          <span>Onderwerp</span>
+          <select name="onderwerp" required>
+            <option value="">Kies een</option>
+            <option>Algemene navraag</option>
+            <option>Erediens</option>
+            <option>Berading</option>
+            <option>Kliniek</option>
+            <option>Gee of winkel</option>
+            <option>Media</option>
+          </select>
+        </label>
+        <label class="field wide">
+          <span>Boodskap</span>
+          <textarea name="boodskap" required minlength="8"></textarea>
+        </label>
+        <p class="form-status" id="form-status" role="status"></p>
+        <button class="btn" type="submit">Stuur navraag</button>
+      </form>
     </div>
 
-    <figure class="contact-split-media">
-      <img src="images/exterior-sunrise.jpg" alt="Collage Gemeenskapskerk se gebou in Elarduspark, teen sonop" width="1600" height="900" loading="lazy" decoding="async">
-      <figcaption><b>Ons gebou</b> — op die hoek van Gypsum- en Hornblendstraat, Elarduspark.</figcaption>
-    </figure>
-  </section>
-
-  <section class="prose wrap">
-    <h2>Stuur ’n navraag</h2>
-    <p>Vir nou, stuur gerus direk ’n e-pos of skakel die kantoor — ’n aanlyn-vorm word binnekort by die werf gevoeg.</p>
-    <a class="btn" href="mailto:info@collage.org.za" style="margin-top:.5rem">info@collage.org.za</a>
+    <aside class="contact-aside">
+      <img src="images/exterior-sunrise.jpg" alt="Collage Gemeenskapskerk se gebou in Elarduspark, teen sonop" width="1600" height="900" decoding="async">
+      <dl>
+        <div>
+          <dt>Adres</dt>
+          <dd>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Gypsum+Street+and+Hornblend+Street+Elarduspark+Pretoria" target="_blank" rel="noopener noreferrer">Kry rigting</a></dd>
+        </div>
+        <div>
+          <dt>Telefoon</dt>
+          <dd><a href="tel:+27123451181">012 345 1181</a><br><a href="tel:+27660167668">066 016 7668</a></dd>
+        </div>
+        <div>
+          <dt>E-pos</dt>
+          <dd><a href="mailto:info@collage.org.za">info@collage.org.za</a></dd>
+        </div>
+        <div>
+          <dt>Kantoor</dt>
+          <dd>08:00–16:00, weeksdae</dd>
+        </div>
+        <div>
+          <dt>Elders</dt>
+          <dd><a href="berading.html">Berading</a> · <a href="kliniek.html">Kliniek</a><br><a href="https://kleingroepe.collage.org.za" target="_blank" rel="noopener noreferrer">Kleingroepe</a></dd>
+        </div>
+      </dl>
+      <p class="fine">Vir ’n kliniek- of beradingsafspraak, gebruik die bespreekskakel op daardie bladsy. Hierdie vorm is vir algemene navrae.</p>
+    </aside>
   </section>
 
 </main>
 
-<section class="close" aria-labelledby="gee-h">
-  <div class="wrap">
+<footer class="site-foot">
+  <div class="wrap foot-main">
     <div>
-      <h2 id="gee-h">Wil jy eers ’n Sondag kom kyk?</h2>
-      <p>Dis die maklikste manier om die gemeente te leer ken voor enige ander stap.</p>
-      <a class="btn" href="gebeure.html">Diens-tye</a>
-      <a class="btn-ghost" href="gee.html">Gee ’n bydrae</a>
+      <p class="foot-name" translate="no">Collage</p>
+      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
     </div>
-    <div class="contact">
-      <h3>Kontak</h3>
-      <p>Gypsum- &amp; Hornblendstraat, Elarduspark, 0181</p>
-      <p><a href="tel:+27123451181">012 345 1181</a></p>
-      <p><a href="mailto:info@collage.org.za">info@collage.org.za</a></p>
+    <nav aria-label="Voetkieslys">
+      <p class="foot-label">Besoek</p>
+      <ul>
+        <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="berading.html">Berading</a></li>
+        <li><a href="kliniek.html">Kliniek</a></li>
+        <li><a href="english.html" lang="en">English</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Doen saam">
+      <p class="foot-label">Doen saam</p>
+      <ul>
+        <li><a href="geloof.html">Geloof</a></li>
+        <li><a href="gee.html">Gee</a></li>
+        <li><a href="winkel.html">Winkel</a></li>
+        <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-label">Kantoor</p>
+      <ul>
+        <li><a href="tel:+27123451181">012 345 1181</a></li>
+        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
+        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
     </div>
   </div>
-</section>
-
-<footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap foot-bar">
     <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <ul>
-      <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
-      <li><a href="https://x.com/collagegemeente">X</a></li>
-      <li><a href="https://apps.apple.com/app/id6751739190">App Store</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT">Google Play</a></li>
-      <li><span>Konsep deur ASC Software</span></li>
-    </ul>
+    <span>
+      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
+      <span>Konsep deur ASC Software</span>
+    </span>
   </div>
 </footer>
 

@@ -3,26 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f5f1e8">
+<meta name="theme-color" content="#f6f2e8">
 <title>Wat Glo Ons? — Collage Gemeenskapskerk</title>
 <meta name="description" content="Collage Gemeenskapskerk se geloofsbelydenis, leerstellings en leierspan.">
 <link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="page-faith">
 
 <a class="skip" href="#main">Spring na hoofinhoud</a>
 
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="40" height="40" aria-hidden="true">
+      <img src="images/logo.png" alt="" width="42" height="42">
       <span>
         <span class="n" translate="no">Collage</span>
         <span class="p">Gemeenskapskerk, Elarduspark</span>
       </span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Kieslys</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
     <nav id="mainnav" aria-label="Hoofkieslys">
       <ul class="nav-links">
         <li><a href="index.html">Tuis</a></li>
@@ -31,9 +34,9 @@
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
         <li><a href="geloof.html" aria-current="page">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
         <li><a href="winkel.html">Winkel</a></li>
         <li><a href="kontak.html">Kontak</a></li>
+        <li><a class="nav-cta" href="gee.html">Gee</a></li>
       </ul>
     </nav>
   </div>
@@ -41,91 +44,125 @@
 
 <main id="main">
 
-  <section class="page-head wrap">
-    <p class="eyebrow">Wat Glo Ons?</p>
-    <h1>Die Bybel as <em>fondasie.</em></h1>
-    <p>’n Moderne Afrikaanse gemeente met die Bybel as fondasie, in Elarduspark, Pretoria. Hier is die geloofsbelydenis, die leerstellings en die span wat dit alles dra.</p>
-  </section>
-
-  <section class="prose wrap">
-    <h2>Leerstellings</h2>
-    <p>Veertien dokumente wat Collage se posisie op sleutelkwessies uiteensit, beskikbaar as aflaaibare geloofsbelydenisse. ’n Greep daarvan:</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Die Bybel</h3>
-        <p>Wat Collage glo oor die Skrif se gesag en betroubaarheid.</p>
-      </div>
-      <div class="card">
-        <h3>Wie Is Jesus?</h3>
-        <p>Die kern van Collage se Christologie.</p>
-      </div>
-      <div class="card">
-        <h3>Wat is ’n Christen?</h3>
-        <p>Hoe Collage bekering en geloof verstaan.</p>
-      </div>
-      <div class="card">
-        <h3>Die Huwelik</h3>
-        <p>Collage se posisie oor die huwelik.</p>
-      </div>
-      <div class="card">
-        <h3>Egskeiding en Hertrou</h3>
-        <p>’n Bybelse perspektief op egskeiding en hertrou.</p>
-      </div>
-      <div class="card">
-        <h3>Wat is Waarheid?</h3>
-        <p>Oor waarheid en gesag in ’n post-moderne wêreld.</p>
-      </div>
+  <section class="faith-hero wrap">
+    <div class="rise-in">
+      <p class="eyebrow">Wat glo ons?</p>
+      <h1>Die Bybel as <em>fondasie.</em></h1>
     </div>
-    <p>Plus agt verdere dokumente, insluitend oor selfmoord — almal beskikbaar by die gemeente se amptelike webwerf.</p>
+    <blockquote>’n Droom dat ons mense kan ontwikkel wat die wêreld verander, ’n kerk bou wat ’n hele stad beïnvloed — ’n stad op ’n berg waarvan die lig nie weggesteek kan word nie.</blockquote>
   </section>
 
-  <section class="photo-band wrap">
-    <figure>
-      <img src="images/doop.jpg" alt="’n Doopgeleentheid by Collage Gemeenskapskerk" width="1600" height="899" loading="lazy" decoding="async">
-      <figcaption><b>Doop by Collage</b> — geloof wat sigbaar word, een van die maniere waarop die gemeente dit saam vier.</figcaption>
-    </figure>
+  <section class="wrap reveal" aria-labelledby="leer-h">
+    <h2 class="doctrine-title" id="leer-h">Leerstellings</h2>
+    <p class="lede">Veertien dokumente sit Collage se posisie op sleutelkwessies uiteen. ’n Greep daarvan — die res, insluitend ’n stuk oor selfmoord, lê op die <a href="https://collage.org.za/" target="_blank" rel="noopener noreferrer">amptelike webwerf</a>.</p>
+    <ol class="doctrine">
+      <li>
+        <span class="n">01</span>
+        <div>
+          <h3>Die Bybel</h3>
+          <p>Wat Collage glo oor die Skrif se gesag en betroubaarheid.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <div>
+          <h3>Wie is Jesus?</h3>
+          <p>Die kern van Collage se Christologie. <a href="https://collage.org.za/wp-content/uploads/2023/08/Wie-is-Jesus-2023.pdf" target="_blank" rel="noopener noreferrer">Lees die dokument</a></p>
+        </div>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <div>
+          <h3>Wat is ’n Christen?</h3>
+          <p>Hoe Collage bekering en geloof verstaan.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <div>
+          <h3>Die Huwelik</h3>
+          <p>Collage se posisie oor die huwelik.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">05</span>
+        <div>
+          <h3>Egskeiding en hertrou</h3>
+          <p>’n Bybelse perspektief op egskeiding en hertrou.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">06</span>
+        <div>
+          <h3>Wat is waarheid?</h3>
+          <p>Oor waarheid en gesag in ’n post-moderne wêreld.</p>
+        </div>
+      </li>
+    </ol>
   </section>
 
-  <section class="pull wrap">
-    <blockquote>’n Droom dat ons mense kan ontwikkel wat die wêreld verander, ’n kerk bou wat ’n hele stad beïnvloed — ’n stad op ’n berg waarvan die lig nie weggesteek kan word nie.
-      <cite>Collage se eie beskrywing van sy droom</cite>
-    </blockquote>
+  <figure class="caption-split wrap reveal">
+    <img src="images/doop.jpg" alt="’n Doopgeleentheid by Collage Gemeenskapskerk" width="1600" height="899" loading="lazy" decoding="async">
+    <figcaption>
+      <b>Doop by Collage</b>
+      Geloof wat sigbaar word. Een van die maniere waarop die gemeente dit saam vier.
+    </figcaption>
+  </figure>
+
+  <section class="team wrap reveal">
+    <h2>Die span</h2>
+    <ul class="roster">
+      <li><b>dr. Ernrich Basson</b><span>Senior Leraar</span></li>
+      <li><b>pastoor Jors Jordaan</b><span>Kerkbestuurder</span></li>
+    </ul>
+    <p class="lede">Saam met ’n span van meer as 25 mense oor vrouebediening, berading, studente- en jeugwerk, musiek, kinderbediening, sending, finansies, administrasie, klank en die koffiewinkel.</p>
   </section>
 
-  <section class="prose wrap">
-    <h2>Die Span</h2>
-    <p>Gelei deur <b>dr. Ernrich Basson</b> (Senior Leraar) en <b>pastoor Jors Jordaan</b> (Kerkbestuurder), met ’n span van meer as 25 mense oor vrouebediening, berading, studente- en jeugwerk, musiek, kinderbediening, sending, finansies, administrasie, klank en die koffiewinkel.</p>
-  </section>
+  <p class="next-step wrap">Die beste manier om dit te leer ken is ’n Sondag. <a href="gebeure.html">Kom kyk</a></p>
 
 </main>
 
-<section class="close" aria-labelledby="gee-h">
-  <div class="wrap">
+<footer class="site-foot">
+  <div class="wrap foot-main">
     <div>
-      <h2 id="gee-h">Kom maak eerstehands kennis.</h2>
-      <p>Die beste manier om te verstaan waarvoor ons staan, is om ’n Sondag by ons te kom deurbring.</p>
-      <a class="btn" href="gebeure.html">Kom kyk</a>
-      <a class="btn-ghost" href="kontak.html">Kontak ons</a>
+      <p class="foot-name" translate="no">Collage</p>
+      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
     </div>
-    <div class="contact">
-      <h3>Kontak</h3>
-      <p>Gypsum- &amp; Hornblendstraat, Elarduspark, 0181</p>
-      <p><a href="tel:+27123451181">012 345 1181</a></p>
-      <p><a href="kontak.html">Stuur ’n navraag &rarr;</a></p>
+    <nav aria-label="Voetkieslys">
+      <p class="foot-label">Besoek</p>
+      <ul>
+        <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="berading.html">Berading</a></li>
+        <li><a href="kliniek.html">Kliniek</a></li>
+        <li><a href="english.html" lang="en">English</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Doen saam">
+      <p class="foot-label">Doen saam</p>
+      <ul>
+        <li><a href="geloof.html" aria-current="page">Geloof</a></li>
+        <li><a href="gee.html">Gee</a></li>
+        <li><a href="winkel.html">Winkel</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-label">Kantoor</p>
+      <ul>
+        <li><a href="tel:+27123451181">012 345 1181</a></li>
+        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
+        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
     </div>
   </div>
-</section>
-
-<footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap foot-bar">
     <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <ul>
-      <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
-      <li><a href="https://x.com/collagegemeente">X</a></li>
-      <li><a href="https://apps.apple.com/app/id6751739190">App Store</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT">Google Play</a></li>
-      <li><span>Konsep deur ASC Software</span></li>
-    </ul>
+    <span>
+      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
+      <span>Konsep deur ASC Software</span>
+    </span>
   </div>
 </footer>
 

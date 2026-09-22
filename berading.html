@@ -3,26 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f5f1e8">
+<meta name="theme-color" content="#f1f3ee">
 <title>Berading Sentrum — Collage Gemeenskapskerk</title>
 <meta name="description" content="Geestelike begeleiding, berading, GriefShare, DivorceCare en die Gardens of Hope-gebedstuin by Collage se Berading Sentrum in Elarduspark.">
 <link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="page-care">
 
 <a class="skip" href="#main">Spring na hoofinhoud</a>
 
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="40" height="40" aria-hidden="true">
+      <img src="images/logo.png" alt="" width="42" height="42">
       <span>
         <span class="n" translate="no">Collage</span>
         <span class="p">Gemeenskapskerk, Elarduspark</span>
       </span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Kieslys</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
     <nav id="mainnav" aria-label="Hoofkieslys">
       <ul class="nav-links">
         <li><a href="index.html">Tuis</a></li>
@@ -31,9 +34,9 @@
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
         <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
         <li><a href="winkel.html">Winkel</a></li>
         <li><a href="kontak.html">Kontak</a></li>
+        <li><a class="nav-cta" href="gee.html">Gee</a></li>
       </ul>
     </nav>
   </div>
@@ -41,92 +44,104 @@
 
 <main id="main">
 
-  <section class="page-head wrap has-media">
-    <div>
+  <section class="split-hero wrap">
+    <div class="rise-in">
       <p class="eyebrow">Deur 02</p>
       <h1>Berading <em>Sentrum</em></h1>
-      <p>Christelike geestelike begeleiding en professionele berading vir individue en groepe — vir lidmate en vir enigeen in Elarduspark, ongeag geloof.</p>
+      <p class="lede">Christelike geestelike begeleiding en professionele berading vir individue en groepe — vir lidmate en vir enigeen in Elarduspark, ongeag geloof.</p>
+      <div class="btn-row">
+        <a class="btn" href="https://counselling.touchwellness.org.za" target="_blank" rel="noopener noreferrer">Maak ’n afspraak</a>
+        <a class="btn-line" href="tel:+27123451181">012 345 1181</a>
+      </div>
     </div>
-    <figure class="head-media">
-      <img src="images/gemeente-1.jpg" alt="Gemeentelede by Collage Gemeenskapskerk" width="1600" height="900" loading="lazy" decoding="async">
+    <figure class="split-photo">
+      <img src="images/kapel.jpg" alt="Die kapel by Collage se Berading Sentrum" width="1600" height="900" decoding="async">
+      <figcaption>Die kapel, waar die Woensdagdiens en die gebedstuin saam vandaan werk.</figcaption>
     </figure>
   </section>
 
-  <section class="prose wrap">
-    <div class="cols">
+  <section class="path wrap reveal" aria-label="Wat die sentrum bied">
+    <article>
+      <span>01</span>
       <div>
-        <h2>Geestelike begeleiding &amp; berading</h2>
-        <p>Christelike geestelike begeleiding is ’n proses waarin gelowiges pastoraal begelei word deur gebed, die Woord en geloof. Daarnaas bied die sentrum individuele en groepberading vir emosionele, sosiale en gedragsuitdagings, insluitend krisis- en traumaondersteuning.</p>
+        <h2>Geestelike begeleiding</h2>
+        <p>Christelike geestelike begeleiding is ’n proses waarin gelowiges pastoraal begelei word deur gebed, die Woord en geloof. Die sentrum is weeksdae oop, met afspraaktye Maandag, Dinsdag en Donderdag vanaf 09:00.</p>
       </div>
+    </article>
+    <article>
+      <span>02</span>
       <div>
-        <h2>Groepprogramme</h2>
-        <p><b>GriefShare</b> (rouverwerking) en <b>DivorceCare</b> (egskeidingsondersteuning) loop as deurlopende groepe, saam met korttermyn-kursusse oor verlies, ouerskap en stres.</p>
+        <h2>Berading en groepe</h2>
+        <p>Individuele en groepberading vir emosionele, sosiale en gedragsuitdagings, insluitend krisis- en traumaondersteuning. <b>GriefShare</b> (rouverwerking) en <b>DivorceCare</b> (egskeidingsondersteuning) loop as deurlopende groepe, saam met kort kursusse oor verlies, ouerskap en stres.</p>
       </div>
-    </div>
+    </article>
+    <article>
+      <span>03</span>
+      <div>
+        <h2>Kapel, Woensdae 13:00</h2>
+        <p>Dertig minute, met gebed en die geleentheid vir nagmaal. Jy hoef nie vooraf te bespreek om die kapeldiens by te woon nie.</p>
+      </div>
+    </article>
+    <article>
+      <span>04</span>
+      <div>
+        <h2>Gardens of Hope</h2>
+        <p>’n Selfgeleide gebedstuin met 12 stasies, boekies en kerse. Oop Maandag tot Vrydag, 08:00–16:00. Loop dit op jou eie pas.</p>
+      </div>
+    </article>
   </section>
 
-  <section class="wrap">
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>Kapel</h3>
-        <p class="big">Woensdae 13:00</p>
-        <p>30 minute, met gebed en die geleentheid vir nagmaal</p>
-      </div>
-      <div class="info-card">
-        <h3>Gardens of Hope</h3>
-        <p class="big">Ma–Vr, 08:00–16:00</p>
-        <p>’n Selfgeleide gebedstuin met 12 stasies, boekies en kerse</p>
-      </div>
-      <div class="info-card">
-        <h3>Maak ’n afspraak</h3>
-        <p class="big">012 345 1181</p>
-        <p>Of bespreek aanlyn by <a href="https://counselling.touchwellness.org.za">counselling.touchwellness.org.za</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="photo-band wrap">
-    <figure>
-      <img src="images/kapel.jpg" alt="Die kapel by Collage se Berading Sentrum" width="1600" height="900" loading="lazy" decoding="async">
-      <figcaption><b>Die kapel</b> — waar die Woensdag-kapeldiens en die Gardens of Hope-gebedstuin saam vandaan werk.</figcaption>
-    </figure>
-  </section>
-
-  <section class="pull wrap">
+  <section class="pull wrap reveal">
     <blockquote>Jy hoef nie lid te wees om deur hierdie deur te loop nie.
-      <cite>Collage se toegangsbeleid vir die Berading Sentrum</cite>
+      <cite>Toegang tot die Berading Sentrum</cite>
     </blockquote>
   </section>
 
+  <p class="next-step wrap">’n Bydrae hou die sentrum toeganklik vir mense wat dit nie ten volle kan bekostig nie. <a href="gee.html">Gee ’n bydrae</a></p>
+
 </main>
 
-<section class="close" aria-labelledby="gee-h">
-  <div class="wrap">
+<footer class="site-foot">
+  <div class="wrap foot-main">
     <div>
-      <h2 id="gee-h">Die berading loop op bydraes.</h2>
-      <p>’n Bydrae hou die sentrum se dienste toeganklik vir mense wat dit nie ten volle kan bekostig nie.</p>
-      <a class="btn" href="gee.html">Gee ’n bydrae</a>
-      <a class="btn-ghost" href="https://counselling.touchwellness.org.za">Maak ’n afspraak</a>
+      <p class="foot-name" translate="no">Collage</p>
+      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
     </div>
-    <div class="contact">
-      <h3>Kontak</h3>
-      <p>Gypsum- &amp; Hornblendstraat, Elarduspark, 0181</p>
-      <p><a href="tel:+27123451181">012 345 1181</a></p>
-      <p><a href="kontak.html">Stuur ’n navraag &rarr;</a></p>
+    <nav aria-label="Voetkieslys">
+      <p class="foot-label">Besoek</p>
+      <ul>
+        <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="berading.html" aria-current="page">Berading</a></li>
+        <li><a href="kliniek.html">Kliniek</a></li>
+        <li><a href="english.html" lang="en">English</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Doen saam">
+      <p class="foot-label">Doen saam</p>
+      <ul>
+        <li><a href="geloof.html">Geloof</a></li>
+        <li><a href="gee.html">Gee</a></li>
+        <li><a href="winkel.html">Winkel</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-label">Kantoor</p>
+      <ul>
+        <li><a href="tel:+27123451181">012 345 1181</a></li>
+        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
+        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
     </div>
   </div>
-</section>
-
-<footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap foot-bar">
     <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <ul>
-      <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
-      <li><a href="https://x.com/collagegemeente">X</a></li>
-      <li><a href="https://apps.apple.com/app/id6751739190">App Store</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT">Google Play</a></li>
-      <li><span>Konsep deur ASC Software</span></li>
-    </ul>
+    <span>
+      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
+      <span>Konsep deur ASC Software</span>
+    </span>
   </div>
 </footer>
 

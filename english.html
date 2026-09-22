@@ -3,26 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f5f1e8">
+<meta name="theme-color" content="#f4f1eb">
 <title>English Service — Collage Community Church</title>
 <meta name="description" content="Collage Community Church's English-language service, Sundays 11:00am–12:00pm in Elardus Park, Pretoria.">
 <link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="page-english">
 
 <a class="skip" href="#main">Skip to main content</a>
 
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="40" height="40" aria-hidden="true">
+      <img src="images/logo.png" alt="" width="42" height="42">
       <span>
         <span class="n" translate="no">Collage</span>
         <span class="p" lang="af">Gemeenskapskerk, Elarduspark</span>
       </span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Menu" data-close="Close">Menu</button>
     <nav id="mainnav" aria-label="Main menu">
       <ul class="nav-links">
         <li><a href="index.html" lang="af">Tuis</a></li>
@@ -31,9 +34,9 @@
         <li><a href="kliniek.html" lang="af">Kliniek</a></li>
         <li><a href="english.html" aria-current="page">English</a></li>
         <li><a href="geloof.html" lang="af">Geloof</a></li>
-        <li><a href="gee.html" lang="af">Gee</a></li>
         <li><a href="winkel.html" lang="af">Winkel</a></li>
         <li><a href="kontak.html" lang="af">Kontak</a></li>
+        <li><a class="nav-cta" href="gee.html" lang="af">Gee</a></li>
       </ul>
     </nav>
   </div>
@@ -41,81 +44,89 @@
 
 <main id="main">
 
-  <section class="page-head wrap">
-    <p class="eyebrow">Sundays, 11:00am – 12:00pm</p>
-    <h1>The <em>English Service.</em></h1>
-    <p>A warm and intimate, Word-based worship service in English — same church, same building, in Elardus Park, Pretoria.</p>
-  </section>
-
-  <section class="photo-band wrap">
-    <figure>
-      <img src="images/gemeente-1.jpg" alt="The congregation gathered at Collage Community Church" width="1600" height="900" loading="lazy" decoding="async">
-      <figcaption><b>Sunday at Collage</b> — the same auditorium the English Service meets in at 11:00.</figcaption>
-    </figure>
-  </section>
-
-  <section class="prose wrap">
-    <div class="cols">
-      <div>
-        <h2>What to expect</h2>
-        <p>A full hour of Word-based worship and teaching. Kids are welcome — a dedicated children's programme runs alongside the service, giving kids a safe space to get to know the Lord.</p>
-      </div>
-      <div>
-        <h2>After the service</h2>
-        <p>Free coffee is available afterwards, to encourage connection and conversation between believers. No booking needed — just come as you are.</p>
-      </div>
+  <section class="photo-hero" aria-labelledby="en-h">
+    <img src="images/gemeente-1.jpg" alt="The congregation gathered at Collage Community Church" width="1600" height="900" decoding="async">
+    <div class="photo-hero-copy wrap rise-in">
+      <p class="eyebrow">Sundays, 11:00–12:00</p>
+      <h1 id="en-h">The <em>English</em> Service.</h1>
+      <p>A warm, Word-based hour in English. Same church, same building, in Elardus Park, Pretoria. Come as you are.</p>
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>When</h3>
-        <p class="big">Sundays, 11:00</p>
-        <p>One hour, until 12:00</p>
-      </div>
-      <div class="info-card">
-        <h3>Where</h3>
-        <p class="big">Main auditorium</p>
-        <p>Collage Community Church, Elardus Park, Pretoria, 0181</p>
-      </div>
-      <div class="info-card">
-        <h3>Kids</h3>
-        <p class="big">All ages</p>
-        <p>Children's programme runs during the service</p>
-      </div>
+  <dl class="facts wrap">
+    <div>
+      <dt>When</dt>
+      <dd>Sundays, 11:00</dd>
+      <dd>One hour, until 12:00</dd>
+    </div>
+    <div>
+      <dt>Where</dt>
+      <dd>Main auditorium</dd>
+      <dd>Elardus Park, Pretoria, 0181</dd>
+    </div>
+    <div>
+      <dt>Kids</dt>
+      <dd>All ages</dd>
+      <dd>A children's programme runs during the service</dd>
+    </div>
+  </dl>
+
+  <section class="two wrap reveal">
+    <div>
+      <h2>What to expect</h2>
+      <p>A full hour of Word-based worship and teaching. Kids are welcome — the children's programme gives them a safe space to get to know the Lord while the service is on.</p>
+    </div>
+    <div>
+      <h2>After the service</h2>
+      <p>Free coffee is waiting afterwards, so there is time to talk. No booking, no dress code. If you need directions or a lift-friendly note for someone else, the office can help.</p>
     </div>
   </section>
+
+  <p class="next-step wrap">The Afrikaans services are at 09:00 and 17:00. <a href="gebeure.html" lang="af">See the full Sunday</a>, or <a href="kontak.html" lang="af">get in touch</a>.</p>
 
 </main>
 
-<section class="close" aria-labelledby="give-h">
-  <div class="wrap">
+<footer class="site-foot">
+  <div class="wrap foot-main">
     <div>
-      <h2 id="give-h">Support the ministries this service is part of.</h2>
-      <p>The counseling centre and medical clinic run on giving, not just Sunday attendance.</p>
-      <a class="btn" href="gee.html" lang="af">Give a contribution</a>
-      <a class="btn-ghost" href="kontak.html" lang="af">Get in touch</a>
+      <p class="foot-name" translate="no">Collage</p>
+      <p>Community Church<br>Gypsum &amp; Hornblend Street<br>Elardus Park, 0181</p>
     </div>
-    <div class="contact">
-      <h3>Contact</h3>
-      <p>Gypsum &amp; Hornblend Street, Elardus Park, 0181</p>
-      <p><a href="tel:+27123451181">012 345 1181</a></p>
-      <p><a href="kontak.html" lang="af">Send us a message &rarr;</a></p>
+    <nav aria-label="Visit">
+      <p class="foot-label">Visit</p>
+      <ul>
+        <li><a href="gebeure.html" lang="af">Gebeure</a></li>
+        <li><a href="berading.html" lang="af">Berading</a></li>
+        <li><a href="kliniek.html" lang="af">Kliniek</a></li>
+        <li><a href="english.html" aria-current="page">English</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Take part">
+      <p class="foot-label">Take part</p>
+      <ul>
+        <li><a href="geloof.html" lang="af">Geloof</a></li>
+        <li><a href="gee.html" lang="af">Gee</a></li>
+        <li><a href="winkel.html" lang="af">Winkel</a></li>
+        <li><a href="kontak.html" lang="af">Kontak</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-label">Office</p>
+      <ul>
+        <li><a href="tel:+27123451181">012 345 1181</a></li>
+        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
+        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
     </div>
   </div>
-</section>
-
-<footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap foot-bar">
     <span>&copy; 2026 Collage Community Church</span>
-    <ul>
-      <li><a href="https://facebook.com/collagegemeente">Facebook</a></li>
-      <li><a href="https://x.com/collagegemeente">X</a></li>
-      <li><a href="https://apps.apple.com/app/id6751739190">App Store</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT">Google Play</a></li>
-      <li><span lang="af">Konsep deur ASC Software</span></li>
-    </ul>
+    <span>
+      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
+      <span lang="af">Konsep deur ASC Software</span>
+    </span>
   </div>
 </footer>
 

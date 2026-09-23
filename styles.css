@@ -344,6 +344,19 @@ p{margin-bottom:.85rem}
 .panel-text,.card-info{padding:22px 20px}
 .card-info h2{margin-bottom:10px}
 .card-info p{margin-bottom:10px}
+.english-expect,.english-after{
+  padding:28px 0;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.english-expect{
+  background-image:linear-gradient(90deg, rgba(245,241,234,.9), rgba(245,241,234,.72)), url("https://collage.org.za/wp-content/uploads/2023/05/English-Service-9.png");
+}
+.english-after{
+  background-image:linear-gradient(90deg, rgba(245,241,234,.9), rgba(245,241,234,.72)), url("https://collage.org.za/wp-content/uploads/2023/05/English-Service-8.png");
+}
+.english-expect .panel-text,.english-after .panel-text{border-radius:18px;background:rgba(255,255,255,.56)}
 
 .page-gallery{padding:12px 0 2px}
 .gallery-grid{display:grid;gap:14px}
@@ -570,6 +583,7 @@ p{margin-bottom:.85rem}
   body.nav-open{overflow:hidden}
 }
 @media (max-width:800px){
+  .sunday{display:none}
   .sunday-in{display:block}
   .sunday-in > p{display:block;width:100%;max-width:100%}
   .sunday-in > p:first-child a{display:block;margin:0;padding:1px 0}
@@ -577,8 +591,29 @@ p{margin-bottom:.85rem}
 @media (max-width:640px){
   .wrap{width:min(var(--max), calc(100% - 28px))}
   .week-head,.app-promo .wrap,.split,.two,.contact-grid,.shop-intro{flex-direction:column;align-items:flex-start}
-  .shortcut-row{grid-template-columns:1fr}
-  .shortcut{align-items:center;text-align:center}
+  .app-badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
+  .app-badge{min-width:0;padding:10px 8px;justify-content:center}
+  .block > .split > figure{width:calc(100% + 28px);margin-left:-14px}
+  .block > .split > figure img{height:auto;border-radius:0}
+  .page-gallery{display:none}
+  .site-foot{padding:24px 0 48px;font-size:.88rem}
+  .site-foot .foot-grid{gap:14px}
+  .site-foot .foot-grid > div:nth-child(2){display:none}
+  .site-foot .fine{margin-top:14px;padding-top:10px;font-size:.76rem}
+  .contact-grid > .form{display:none}
+  .more-about{grid-template-columns:1fr;gap:32px}
+  .team-card,.team-card figcaption{min-width:0}
+  .team-card strong,.team-card span,.team-card a{overflow-wrap:anywhere}
+  .catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .product{border-radius:12px}
+  .product .body{gap:4px;padding:8px}
+  .product h3{font-size:.9rem}
+  .product .add-to-cart{min-height:38px;padding:8px 10px;font-size:.82rem}
+  .shortcut-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+  .shortcut{align-items:center;text-align:center;padding:8px 2px 12px;gap:4px}
+  .shortcut img{width:64px;height:64px}
+  .shortcut strong{font-size:.95rem}
+  .shortcut span{display:none}
   .board-grid{grid-template-columns:1fr 1fr}
   .shop,.people,.docs,.foot-grid{grid-template-columns:1fr}
   .team-grid{grid-template-columns:1fr 1fr}

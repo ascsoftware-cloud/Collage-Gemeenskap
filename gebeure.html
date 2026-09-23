@@ -2,160 +2,99 @@
 <html lang="af">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f3efe6">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1e3f73">
 <title>Gebeure | Collage Gemeenskapskerk</title>
-<meta name="description" content="Eredienste, gebeure en die weeklikse rooster by Collage Gemeenskapskerk, Elarduspark.">
+<meta name="description" content="Vaste tye by Collage: Sondag 09:00, 11:00 en 17:00, kapel Woensdag 13:00, en die tuine weeksdae.">
 <link rel="icon" href="images/logo.png">
-<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="page-events">
-
+<body>
 <a class="skip" href="#main">Spring na hoofinhoud</a>
-
-<header class="masthead">
-  <div class="wrap">
-    <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="42" height="42">
-      <span>
-        <span class="n" translate="no">Collage</span>
-        <span class="p">Gemeenskapskerk, Elarduspark</span>
-      </span>
-    </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="44" height="44"><span><strong translate="no">Collage</strong><small>Gemeenskapskerk</small></span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span class="lbl">Kieslys</span></button>
     <nav id="mainnav" aria-label="Hoofkieslys">
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Tuis</a></li>
         <li><a href="gebeure.html" aria-current="page">Gebeure</a></li>
+        <li><a href="inligting.html">Inligting</a></li>
         <li><a href="berading.html">Berading</a></li>
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="winkel.html">Winkel</a></li>
+        <li class="has-sub"><a href="geloof.html">Geloof</a><ul>
+          <li><a href="geloof.html#verwag">By die erediens</a></li>
+          <li><a href="geloof.html#droom">Ons droom</a></li>
+          <li><a href="geloof.html#span">Die span</a></li>
+          <li><a href="geloof.html#leerstellings">Leerstellings</a></li>
+        </ul></li>
+        <li><a href="gee.html">Tiendes</a></li>
         <li><a href="kontak.html">Kontak</a></li>
-        <li><a class="nav-cta" href="gee.html">Gee</a></li>
+        <li><a href="winkel.html">Winkel</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<main id="main">
-
-  <section class="event-hero wrap">
-    <div class="rise-in">
-      <p class="eyebrow">Gebeure</p>
-      <h1>Die diens, en alles daarom heen.</h1>
-      <p class="lede">Sondae is die spil, maar die week is vol. Drie eredienste, en ’n kalender wat verder as die oggenddiens loop.</p>
+<div class="sunday"><div class="wrap sunday-in"><p><span>Sondag</span><a href="besoekers.html">09:00 Erediens</a><a href="english.html" lang="en">11:00 English</a><a href="besoekers.html">17:00 Aanddiens</a></p></div></div>
+<main id="main" class="page page-events">
+  <div class="wrap">
+    <div class="event-actions">
+      <a class="btn" href="https://collagegemeenskapskerkcommunitychurch.snappages.site/kalender" target="_blank" rel="noopener noreferrer">Maand kalender</a>
+      <a class="btn btn-quiet" href="inligting.html">Meer inligting</a>
     </div>
-    <ol class="sunday-times">
-      <li><span class="t">09:00</span><span>Erediens, Kinderstad en tieners</span></li>
-      <li><span class="t">11:00</span><span>English Service, een uur</span></li>
-      <li><span class="t">17:00</span><span>Aanddiens, korter en stiller</span></li>
-    </ol>
-  </section>
-
-  <figure class="caption-split wrap reveal">
-    <img src="images/kersfees.jpg" alt="Collage se Kersfees-produksie" width="1600" height="900" loading="lazy" decoding="async">
-    <figcaption>
-      <b>Kersfees by Collage</b>
-      Die groot geleenthede sit langs die gewone Sondag. Die oggenddiens loop met Kinderstad en die tienerprogram. Die Engelse diens is ’n eie uur. Die aanddiens is korter, gerig op stilword.
-      <a href="english.html">Meer oor die English Service</a>
-    </figcaption>
-  </figure>
-
-  <section class="upcoming wrap reveal" aria-labelledby="upcoming-h">
-    <div>
-      <h2 id="upcoming-h">Wat voorlê</h2>
-      <p class="lede">Die volledige kalender word bygehou op die gemeente se maandblad. Hier is die soort gebeure wat daar verskyn.</p>
-      <div class="btn-row">
-        <a class="btn" href="https://collage.org.za/gebeure/" target="_blank" rel="noopener noreferrer">Maand kalender</a>
-        <a class="btn-line" href="kontak.html">Vra die kantoor</a>
-      </div>
+    <h1 class="event-title">Opkomende gebeure</h1>
+    <div class="event-list">
+      <article class="event-row">
+        <img src="images/events/toewyding.jpg" alt="" width="640" height="360">
+        <div>
+          <h2>Kindertoewyding</h2>
+          <time datetime="2026-09-27T09:00">27 September 2026, 09:00–10:00</time>
+          <p>Ons kinders is ’n geskenk van die Here. Wil jy graag jou kind op hierdie datum laat toewy? Registreer gerus hier sodat ons die nodige inligting na jou kan deurstuur.</p>
+          <a href="toewyding.html">Registreer</a>
+        </div>
+      </article>
+      <article class="event-row">
+        <img src="images/events/hoop.jpg" alt="" width="640" height="360">
+        <div>
+          <h2>Hoop-Sondag</h2>
+          <time datetime="2026-10-11T09:00">11 Oktober 2026, 09:00–13:00</time>
+          <p>Kom geniet ’n opwindende Sondag saam met ons terwyl jy reis na elke kontinent en die hoop van Jesus deel. ’n Reiskaartjie om elke kontinent se kos te proe is R50.</p>
+          <a href="winkel.html">R50 in die winkel</a>
+        </div>
+      </article>
+      <article class="event-row">
+        <img src="images/events/gebed.jpg" alt="" width="640" height="360">
+        <div>
+          <h2>Profetiese gebedswerkswinkel</h2>
+          <time datetime="2026-10-17T09:00">17 Oktober 2026, 09:00–12:00</time>
+          <p>’n Oggend in Psalm 42, oor Dawid se gebedslewe, en die praktiese toepassing van profetiese gebed. Registrasie is gratis.</p>
+          <a href="kontak.html">Laat weet die kantoor</a>
+        </div>
+      </article>
+      <article class="event-row">
+        <img src="images/events/mannekamp.jpg" alt="" width="640" height="360">
+        <div>
+          <h2>Mannekamp</h2>
+          <time datetime="2026-10-23">23–25 Oktober 2026</time>
+          <p>Nie ’n kamp vir perfekte manne nie. Onder Jan Curtin se leiding gaan die manne kyk wat dit beteken om ’n man na God se hart te wees.</p>
+          <a href="winkel.html">R1 350 in die winkel</a>
+        </div>
+      </article>
     </div>
-    <ol class="event-list">
-      <li>
-        <span class="tag">Kamp</span>
-        <div>
-          <h3>Kidz Camp</h3>
-          <p>’n Jaarlikse kamp vir Kinderstad, met vervoer, verblyf en aktiwiteite. Pryse sit in die winkel.</p>
-        </div>
-      </li>
-      <li>
-        <span class="tag">Kamp</span>
-        <div>
-          <h3>Mannekamp</h3>
-          <p>’n Jaarlikse naweek vir die mans van die gemeente. Registrasie loop deur die winkel.</p>
-        </div>
-      </li>
-      <li>
-        <span class="tag">Groep</span>
-        <div>
-          <h3>Kankerondersteuningsgroep</h3>
-          <p>’n Deurlopende groep vir lidmate wat met kanker leef, of dit in hul gesin ervaar.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <figure class="caption-split wrap reveal">
-    <img src="images/gathering-2025-2.jpg" alt="Gemeentelede by ’n onlangse gebeurtenis by Collage" width="1600" height="900" loading="lazy" decoding="async">
-    <figcaption>
-      <b>’n Onlangse Sondag</b>
-      Collage in 2025. Vir kampregistrasie en hulpbronne, kyk in die <a href="winkel.html">winkel</a>.
-    </figcaption>
-  </figure>
-
-  <p class="next-step wrap">Wil jy eerste weet? <a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Volg Collage op Facebook</a> of <a href="kontak.html">skakel die kantoor</a>.</p>
-
+    <p class="event-note">Kinderstad en Kingdom Warrior Kids gaan elke Sondag 09:00 voort. Die volle maand staan op die kalender hierbo.</p>
+  </div>
 </main>
-
 <footer class="site-foot">
-  <div class="wrap foot-main">
-    <div>
-      <p class="foot-name" translate="no">Collage</p>
-      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
-    </div>
-    <nav aria-label="Voetkieslys">
-      <p class="foot-label">Besoek</p>
-      <ul>
-        <li><a href="gebeure.html" aria-current="page">Gebeure</a></li>
-        <li><a href="berading.html">Berading</a></li>
-        <li><a href="kliniek.html">Kliniek</a></li>
-        <li><a href="english.html" lang="en">English</a></li>
-      </ul>
-    </nav>
-    <nav aria-label="Doen saam">
-      <p class="foot-label">Doen saam</p>
-      <ul>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
-        <li><a href="winkel.html">Winkel</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
-    <div>
-      <p class="foot-label">Kantoor</p>
-      <ul>
-        <li><a href="tel:+27123451181">012 345 1181</a></li>
-        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
-        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
-      </ul>
-    </div>
+  <div class="wrap foot-grid">
+    <div><p class="tagline">Ope Harte, Helder Geloof.</p><p>Gypsum- en Hornblendstraat<br>Elarduspark, 0181</p></div>
+    <div><h2>Sondag</h2><ul><li><a href="besoekers.html">09:00</a></li><li><a href="english.html">11:00 English</a></li><li><a href="besoekers.html">17:00</a></li></ul></div>
+    <div><h2>Inligting</h2><ul><li><a href="inligting.html">Hele bord</a></li><li><a href="tuine.html">Tuine van Hoop</a></li></ul></div>
+    <div><h2>Kontak</h2><ul><li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li><li><a href="kontak.html">Navrae</a></li></ul></div>
   </div>
-  <div class="wrap foot-bar">
-    <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <span>
-      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
-      <span>Konsep deur ASC Software</span>
-    </span>
-  </div>
+  <div class="wrap fine">Demonstrasie-webwerf. Die kalender op collage.org.za bly die bron vir datums.</div>
 </footer>
-
+<a class="wa" href="https://wa.me/27660167668?text=Hallo%20Collage%2C%20ek%20het%20%27n%20vraag.">WhatsApp</a>
 <script src="script.js"></script>
 </body>
 </html>

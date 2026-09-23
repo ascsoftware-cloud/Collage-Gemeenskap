@@ -2,37 +2,42 @@
 
 Concept redesign for [Collage Gemeenskapskerk](https://collage.org.za/), an Afrikaans congregation in Elarduspark, Pretoria. Client work delivered by ASC Software.
 
-**Status: concept, not production.** Copy, event dates, hours and contact details are still waiting on the church. The contact page opens the visitor's email app with a filled-in message, because this site has no form backend.
+**Status: concept, not production.** Frontend only. The contact form opens the visitor's email app, because this site has no form backend. Shop payments and the doctrine PDFs stay on collage.org.za.
 
 ## Stack
 
-Static HTML/CSS/JS. No build step, no backend, no dependencies. Fonts (Newsreader, Archivo) are self-hosted as woff2. Designed to be cheap to host anywhere and easy to hand off.
+Static HTML/CSS/JS. No build step, no backend, no dependencies. Work Sans is self-hosted as woff2. Designed to be cheap to host anywhere and easy to hand off.
 
 ## Structure
 
 ```
-index.html       Home: the week as the page's spine (seven-day rail, today marked live)
-gebeure.html      Gebeure (events): service times and upcoming events
-berading.html     Berading Sentrum (counseling centre)
-kliniek.html      Mediese Kliniek (medical clinic)
-english.html      English Service
-geloof.html       Geloof (beliefs)
-gee.html          Gee (giving/tithes)
-winkel.html       Winkel (shop)
-kontak.html       Kontak (contact + general inquiries)
-styles.css        Shared design system and components
-script.js         Mobile nav toggle, "today" marking, next-service line
-fonts/, images/   Shared assets
+index.html        Home: Sunday times, the three home icons, and the full Inligting board
+inligting.html    The toonbank board (Meer Info on the live site)
+gebeure.html      Standing weekly times; dated events stay on the live calendar and app
+besoekers.html    A Sunday morning, including Kinderstad, Zone 7 and teens
+berading.html     Counselling, groups, Wednesday chapel
+kliniek.html      Medical clinic, appointment only
+tuine.html        Gardens of Hope, stations, chapel booklets
+english.html      English service, 11:00
+geloof.html       What to expect, the dream, the team, doctrine PDFs
+gee.html          Tithes and Touch Wellness bank details
+winkel.html       Shop catalogue; checkout stays on collage.org.za
+kontak.html       Office details and an email enquiry
+lidmaatskap.html, doop.html, toewyding.html, trou.html, begrafnis.html
+musikante.html, vrywilligers.html, besighede.html, hospitaal.html
+styles.css        Shared design
+script.js         Mobile nav, enquiry mailto
+images/icons/     The congregation's own circular icons
 ```
 
-`stack-pass/` and `week-spine/` are earlier single-page homepage concepts kept for design history; `week-spine` is the direction this site was built from.
+`stack-pass/` and `week-spine/` are earlier homepage sketches kept for history.
 
-## Design tokens
+## Design
 
-Ink (`#141820`) on a warm paper ground (`#f3efe6`), gold accent (`#c6a15a`), Newsreader paired with Archivo. The header, type and footer are shared. Each page has its own layout so the inner pages are not the same template repeated. Motion is a short entrance and scroll reveal, and it switches off for reduced-motion.
+Navy and white, Work Sans, and the pastel icons from collage.org.za. No invented clinic hours or a fake seven-day diary. Forms open the visitor's email app. Shop links go to the live products.
 
 ## Next steps
 
-- Church to confirm: bank details for giving, clinic/counseling hours, real event calendar, shop items and pricing, office email and hours.
+- Church to confirm anything that has changed since the live site: clinic days, the next dedication and baptism dates, and shop prices.
 - Higher-resolution photo originals (current assets pulled from collage.org.za are 768×432–1024×576).
 - Decide hosting and whether content should be editable by church staff.

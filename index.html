@@ -2,144 +2,153 @@
 <html lang="af">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f3efe6">
 <title>Collage Gemeenskapskerk, Elarduspark</title>
-<meta name="description" content="'n Moderne Afrikaanse gemeente in Elarduspark, Pretoria, met die Bybel as fondament. Eredienste, berading, mediese kliniek, kleingroepe en meer.">
+<meta name="description" content="’n Moderne Afrikaanse gemeente met die Bybel as fondament in Elarduspark, Pretoria. Eredienste Sondag 09:00, 11:00 en 17:00.">
 <link rel="icon" href="images/logo.png">
-<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="page-home">
-
+<body>
 <a class="skip" href="#main">Spring na hoofinhoud</a>
 
-<header class="masthead">
-  <div class="wrap">
+<header class="mast">
+  <div class="wrap mast-in">
     <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="42" height="42">
-      <span>
-        <span class="n" translate="no">Collage</span>
-        <span class="p">Gemeenskapskerk, Elarduspark</span>
-      </span>
+      <img src="images/logo.png" alt="" width="44" height="44">
+      <span><strong translate="no">Collage</strong><small>Gemeenskapskerk</small></span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span class="lbl">Kieslys</span></button>
     <nav id="mainnav" aria-label="Hoofkieslys">
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html" aria-current="page">Tuis</a></li>
         <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="inligting.html">Inligting</a></li>
         <li><a href="berading.html">Berading</a></li>
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="winkel.html">Winkel</a></li>
+        <li class="has-sub">
+          <a href="geloof.html">Geloof</a>
+          <ul>
+            <li><a href="geloof.html#verwag">By die erediens</a></li>
+            <li><a href="geloof.html#droom">Ons droom</a></li>
+            <li><a href="geloof.html#span">Die span</a></li>
+            <li><a href="geloof.html#leerstellings">Leerstellings</a></li>
+          </ul>
+        </li>
+        <li><a href="gee.html">Tiendes</a></li>
         <li><a href="kontak.html">Kontak</a></li>
-        <li><a class="nav-cta" href="gee.html">Gee</a></li>
+        <li><a href="winkel.html">Winkel</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="status">
-  <div class="wrap">
-    <span class="today" id="today-line">Elarduspark, Pretoria</span>
-    <span class="next">Volgende diens: <b>Sondag 09:00</b></span>
-    <a href="gebeure.html">Sien die tye</a>
+<div class="sunday">
+  <div class="wrap sunday-in">
+    <p>
+      <span>Sondag</span>
+      <a href="besoekers.html">09:00 Erediens</a>
+      <a href="english.html" lang="en">11:00 English</a>
+      <a href="besoekers.html">17:00 Aanddiens</a>
+    </p>
+    <p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Gypsumstraat+en+Hornblendstraat+Elarduspark+Pretoria">Gypsum- en Hornblendstraat</a>
+    </p>
   </div>
 </div>
 
 <main id="main">
-
-  <section class="week wrap" id="week" aria-labelledby="week-h">
-    <div class="week-head rise-in">
-      <div>
-        <p class="eyebrow">Ope Harte, Helder Geloof</p>
-        <h1 id="week-h">Ons is oop <em>elke dag</em> van die week.</h1>
-      </div>
-      <p>Die meeste kerke wys jou Sondag. Hier is al sewe dae, met wat waar en wanneer gebeur.</p>
-      <button class="calendar-toggle" type="button" aria-expanded="false" aria-controls="week-rail">Wys die week</button>
-    </div>
-
-    <div class="rail" id="week-rail">
-      <div class="day sun" data-day="0">
-        <div class="d-top"><span class="d-name">Sondag</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="gebeure.html"><span class="t">09:00</span><span class="w">Erediens, met kinder- en jeugprogramme</span></a>
-        <a class="slot" href="english.html" lang="en"><span class="t">11:00</span><span class="w">English Service</span></a>
-        <a class="slot" href="gebeure.html"><span class="t">17:00</span><span class="w">Aand-erediens</span></a>
-      </div>
-      <div class="day" data-day="1">
-        <div class="d-top"><span class="d-name">Ma</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="berading.html"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
-        <a class="slot" href="kliniek.html"><span class="t">14:00</span><span class="w">Mediese Kliniek, volgens afspraak</span></a>
-      </div>
-      <div class="day" data-day="2">
-        <div class="d-top"><span class="d-name">Di</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="berading.html"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
-        <a class="slot" href="https://kleingroepe.collage.org.za" target="_blank" rel="noopener noreferrer"><span class="t">18:30</span><span class="w">Kleingroepe deur Elarduspark</span></a>
-      </div>
-      <div class="day" data-day="3">
-        <div class="d-top"><span class="d-name">Wo</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="kliniek.html"><span class="t">08:00</span><span class="w">Mediese Kliniek, volgens afspraak</span></a>
-        <a class="slot" href="gebeure.html"><span class="t">10:00</span><span class="w">Koffiewinkel oop</span></a>
-      </div>
-      <div class="day" data-day="4">
-        <div class="d-top"><span class="d-name">Do</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="berading.html"><span class="t">09:00</span><span class="w">Berading Sentrum</span></a>
-        <a class="slot" href="https://kleingroepe.collage.org.za" target="_blank" rel="noopener noreferrer"><span class="t">18:30</span><span class="w">Kleingroepe</span></a>
-      </div>
-      <div class="day" data-day="5">
-        <div class="d-top"><span class="d-name">Vr</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <a class="slot" href="gebeure.html"><span class="t">10:00</span><span class="w">Koffiewinkel, oop vir almal</span></a>
-      </div>
-      <div class="day" data-day="6">
-        <div class="d-top"><span class="d-name">Sa</span><span class="mark">Vandag</span><span class="d-num"></span></div>
-        <p class="quiet">Stil, tensy daar ’n gemeente-geleentheid is.</p>
+  <section class="service-banner">
+    <img class="service-banner-img" src="images/exterior-sunrise.jpg" alt="" width="1600" height="900">
+    <div class="wrap service-banner-copy">
+      <p class="eyebrow">Elarduspark, Pretoria</p>
+      <h1>Welkom by Collage.</h1>
+      <p class="lede">’n Moderne Afrikaanse gemeente met die Bybel as fondament. Jy is welkom Sondag, en die terrein is deur die week oop vir berading, die kliniek, die gebedstuine en ’n koppie koffie.</p>
+      <div class="actions">
+        <a class="btn" href="besoekers.html">Ek kom Sondag</a>
+        <a class="btn btn-quiet" href="inligting.html">Soek inligting</a>
       </div>
     </div>
   </section>
 
-  <section class="claim has-media reveal" aria-labelledby="claim-h">
+  <section class="shortcuts" aria-label="Vinnige skakels">
+    <div class="wrap shortcut-row">
+      <a class="shortcut" href="gebeure.html">
+        <img src="images/icons/gebeure.png" alt="" width="208" height="208">
+        <strong>Gebeure</strong>
+        <span>Sondae, die kapel op Woensdag, en waar die kalender lê.</span>
+      </a>
+      <a class="shortcut" href="inligting.html">
+        <img src="images/icons/navrae.png" alt="" width="208" height="208">
+        <strong>Inligting</strong>
+        <span>Die toonbank-bord: doop, kliniek, groepe en die res.</span>
+      </a>
+      <a class="shortcut" href="https://kleingroepe.collage.org.za/" target="_blank" rel="noopener noreferrer">
+        <img src="images/icons/kleingroep.png" alt="" width="208" height="208">
+        <strong>Kleingroepe</strong>
+        <span>Groepe in huise deur Elarduspark. Maak op ’n eie blad oop.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="week" id="week" aria-labelledby="week-h">
     <div class="wrap">
-      <div class="claim-text">
-        <h2 id="claim-h">Meer as ’n <em>Sondag-adres.</em></h2>
-        <div class="side">
-          <p>’n Moderne Afrikaanse gemeente met die Bybel as fondament. Die terrein in Elarduspark loop deur die week: berading, mediese sorg, kleingroepe en ’n koffiewinkel wat vir enigeen oop is.</p>
-          <p>Jy hoef nie lid te wees om deur enige van hierdie deure te loop nie. <a class="more" href="geloof.html">Lees meer oor waarvoor ons staan</a></p>
+      <div class="week-head">
+        <div>
+          <h2 id="week-h">Die week</h2>
+          <p>Wat elke dag op die terrein gebeur. Vandag is gemerk.</p>
+        </div>
+        <button class="calendar-toggle" type="button" aria-expanded="false" aria-controls="week-rail">Wys die week</button>
+      </div>
+      <div class="rail" id="week-rail">
+        <div class="day sun" data-day="0">
+          <div class="d-top"><span class="d-name">Sondag</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="besoekers.html"><span class="t">09:00</span><span class="w">Erediens, Kinderstad, Zone 7 en tieners</span></a>
+          <a class="slot" href="english.html" lang="en"><span class="t">11:00</span><span class="w">English Service</span></a>
+          <a class="slot" href="besoekers.html"><span class="t">17:00</span><span class="w">Aanddiens</span></a>
+        </div>
+        <div class="day" data-day="1">
+          <div class="d-top"><span class="d-name">Ma</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="kontak.html"><span class="t">08:00</span><span class="w">Kantoor oop tot 16:00</span></a>
+          <a class="slot" href="tuine.html"><span class="t">08:00</span><span class="w">Tuine van Hoop</span></a>
+        </div>
+        <div class="day" data-day="2">
+          <div class="d-top"><span class="d-name">Di</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="kontak.html"><span class="t">08:00</span><span class="w">Kantoor en tuine tot 16:00</span></a>
+          <a class="slot" href="https://kleingroepe.collage.org.za/" target="_blank" rel="noopener noreferrer"><span class="t">Saans</span><span class="w">Kleingroepe</span></a>
+        </div>
+        <div class="day" data-day="3">
+          <div class="d-top"><span class="d-name">Wo</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="tuine.html"><span class="t">08:00</span><span class="w">Tuine van Hoop</span></a>
+          <a class="slot" href="tuine.html"><span class="t">13:00</span><span class="w">Kapel, 30 minute</span></a>
+        </div>
+        <div class="day" data-day="4">
+          <div class="d-top"><span class="d-name">Do</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="kontak.html"><span class="t">08:00</span><span class="w">Kantoor en tuine tot 16:00</span></a>
+          <a class="slot" href="berading.html"><span class="t">Afspraak</span><span class="w">Berading Sentrum</span></a>
+        </div>
+        <div class="day" data-day="5">
+          <div class="d-top"><span class="d-name">Vr</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <a class="slot" href="kontak.html"><span class="t">08:00</span><span class="w">Kantoor oop tot 16:00</span></a>
+          <a class="slot" href="tuine.html"><span class="t">08:00</span><span class="w">Tuine van Hoop</span></a>
+        </div>
+        <div class="day" data-day="6">
+          <div class="d-top"><span class="d-name">Sa</span><span class="mark">Vandag</span><span class="d-num"></span></div>
+          <p class="quiet">Stil, tensy daar ’n gemeente-geleentheid is.</p>
         </div>
       </div>
-      <figure class="head-media">
-        <img src="images/gathering-2025-1.jpg" alt="Gemeentelede wat by ’n onlangse gebeurtenis by Collage saamkom" width="1600" height="900" fetchpriority="high" decoding="async">
-      </figure>
     </div>
   </section>
 
-  <section class="evidence wrap reveal" aria-labelledby="ev-h">
-    <h2 id="ev-h" class="eyebrow">Op die terrein</h2>
-    <div class="ev-grid">
-      <figure class="ev tall frame">
-        <img src="images/gathering.jpg" alt="Gemeentelede wat ná die diens in die tuin gesels" width="768" height="432" loading="lazy" decoding="async">
-        <figcaption><b>Ná die oggenddiens</b>Die meeste Sondae loop die tuin vol en bly dit so tot ná middagete.</figcaption>
-      </figure>
-      <div class="ev-stack">
-        <figure class="ev frame">
-          <img src="images/coffee.jpg" alt="Mense by die koffiewinkel op die kerkterrein" width="768" height="432" loading="lazy" decoding="async">
-          <figcaption><b>Die koffiewinkel</b>Deur die week oop, en nie net vir lidmate nie.</figcaption>
-        </figure>
-        <figure class="ev frame">
-          <img src="images/garden.jpg" alt="Lugfoto van die tuin en fontein by Collage" width="768" height="432" loading="lazy" decoding="async">
-          <figcaption><b>Die tuin en fontein</b>Waar die kleingroepe in die somer buite bymekaarkom.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="app-promo reveal">
+  <section class="app-promo" aria-label="Collage-app">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Download our Collage App</p>
-        <p>Preke, gebeure en die kalender, alles in die amptelike Collage-app.</p>
+      <div class="app-lock">
+        <img src="images/logo.png" alt="" width="56" height="56">
+        <div>
+          <p class="app-kicker">Download our app</p>
+          <p>Preke, gebeure en die kalender, alles in die amptelike Collage-app.</p>
+        </div>
       </div>
       <div class="app-badges">
         <a class="app-badge" href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">
@@ -154,109 +163,98 @@
     </div>
   </section>
 
-  <section class="doors wrap reveal" id="deure" aria-labelledby="deure-h">
-    <p class="eyebrow">Vyf deure</p>
-    <h2 id="deure-h">Waar mense inkom</h2>
-    <div class="door-bento">
-      <a class="door door-lead" href="gebeure.html">
-        <img class="door-photo" src="images/gathering.jpg" alt="" width="768" height="432" loading="lazy" decoding="async">
-        <span class="no" aria-hidden="true">01</span>
-        <h3>Eredienste</h3>
-        <p>Drie op ’n Sondag, met kinder- en jeugprogramme in die oggend.</p>
-        <span class="go">Tye</span>
-      </a>
-      <a class="door" href="berading.html">
-        <span class="no" aria-hidden="true">02</span>
-        <h3>Berading Sentrum</h3>
-        <p>Geestelike begeleiding vir individue, paartjies en gesinne.</p>
-        <span class="go">Bespreek</span>
-      </a>
-      <a class="door" href="kliniek.html">
-        <span class="no" aria-hidden="true">03</span>
-        <h3>Mediese Kliniek</h3>
-        <p>Basiese mediese sorg, slegs volgens afspraak.</p>
-        <span class="go">Ure</span>
-      </a>
-      <a class="door" href="https://kleingroepe.collage.org.za" target="_blank" rel="noopener noreferrer">
-        <span class="no" aria-hidden="true">04</span>
-        <h3>Kleingroepe</h3>
-        <p>Groepe deur die voorstad, deur die week in mense se huise.</p>
-        <span class="go">Vind een</span>
-      </a>
-      <a class="door" href="gee.html">
-        <span class="no" aria-hidden="true">05</span>
-        <h3>Gee</h3>
-        <p>Tiendes en bydraes aanlyn, sodat die week se deure oop bly.</p>
-        <span class="go">Gee</span>
-      </a>
+  <section class="block">
+    <div class="wrap split">
+      <figure>
+        <img src="images/gathering.jpg" alt="Mense wat ná ’n byeenkoms op die terrein saamstaan" width="1200" height="800">
+      </figure>
+      <div>
+        <h2>As jy Sondag kom</h2>
+        <ul class="checks">
+          <li>Gratis filterkoffie in die kuierarea voor en ná die diens.</li>
+          <li>Vra die gasvryheidspan by die deure as jy nie weet waar om te gaan nie.</li>
+          <li>Informele kleredrag. Die diens is gewoonlik sowat 60 minute.</li>
+          <li>Kinderstad van sowat 3 jaar tot graad 6, Zone 7 vir graad 7, en tieners in die rondawel. Alles 09:00.</li>
+          <li>Kan jy nie daar wees nie? Die 09:00-diens is ook op <a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a>.</li>
+        </ul>
+        <p><a href="besoekers.html">Meer oor ’n Sondagoggend</a></p>
+      </div>
     </div>
   </section>
 
+  <section class="dream" aria-labelledby="droom-h">
+    <div class="wrap">
+      <h2 id="droom-h">Ons droom</h2>
+      <p>Collage is ’n gemeente met ’n droom dat ons mense kan ontwikkel wat die wêreld verander, ’n kerk kan bou wat ’n hele stad beïnvloed, en dat ons saam ’n stad op ’n berg kan wees waarvan die lig nie weggesteek kan word nie.</p>
+      <p><a href="geloof.html">Die span, en wat ons glo</a></p>
+    </div>
+  </section>
+
+  <section class="gallery wrap" aria-label="Op die terrein">
+    <div class="shots">
+      <figure>
+        <img src="images/garden.jpg" alt="Die tuin en fontein op die kerkterrein" width="1200" height="800">
+        <figcaption>Tuine van Hoop</figcaption>
+      </figure>
+      <figure>
+        <img src="images/kapel.jpg" alt="Die kapel op die terrein" width="800" height="500">
+        <figcaption>Kapel</figcaption>
+      </figure>
+      <figure>
+        <img src="images/coffee.jpg" alt="Mense by die koffie op die terrein" width="800" height="500">
+        <figcaption>Kuier</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gemeente-1.jpg" alt="Gemeentelede tydens ’n byeenkoms" width="800" height="500">
+        <figcaption>Sondag</figcaption>
+      </figure>
+      <figure>
+        <img src="images/kersfees.jpg" alt="Die gemeente se Kersproduksie" width="800" height="500">
+        <figcaption>Kersfees</figcaption>
+      </figure>
+    </div>
+  </section>
 </main>
 
-<section class="close" id="gee" aria-labelledby="gee-h">
-  <div class="wrap">
-    <div>
-      <h2 id="gee-h">Die kliniek en die berading loop op bydraes.</h2>
-      <p>Nie net die Sondagdiens nie. As jy wil help dat die deure deur die week oop bly, is dit waar dit heen gaan.</p>
-      <div class="btn-row">
-        <a class="btn" href="gee.html">Gee ’n bydrae</a>
-        <a class="btn-ghost" href="kontak.html">Kontak die kantoor</a>
-      </div>
-    </div>
-    <div class="contact" id="kontak">
-      <h3>Kontak</h3>
-      <p>Gypsum- &amp; Hornblendstraat, Elarduspark, 0181</p>
-      <p><a href="tel:+27123451181">012 345 1181</a></p>
-      <p><a href="mailto:info@collage.org.za">info@collage.org.za</a></p>
-    </div>
-  </div>
-</section>
-
 <footer class="site-foot">
-  <div class="wrap foot-main">
+  <div class="wrap foot-grid">
     <div>
-      <p class="foot-name" translate="no">Collage</p>
-      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
+      <p class="tagline">Ope Harte, Helder Geloof.</p>
+      <p>Gypsum- en Hornblendstraat<br>Elarduspark, Pretoria, 0181</p>
+      <p><br><a href="tel:+27660167668">066 016 7668</a><br>Kantoor 08:00–16:00<br><a href="mailto:info@collage.org.za">info@collage.org.za</a></p>
     </div>
-    <nav aria-label="Voetkieslys">
-      <p class="foot-label">Besoek</p>
+    <div>
+      <h2>Sondag</h2>
       <ul>
-        <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="besoekers.html">09:00 Erediens</a></li>
+        <li><a href="english.html" lang="en">11:00 English</a></li>
+        <li><a href="besoekers.html">17:00 Aanddiens</a></li>
+        <li><a href="tuine.html">Wo 13:00 Kapel</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Inligting</h2>
+      <ul>
+        <li><a href="inligting.html">Hele bord</a></li>
         <li><a href="berading.html">Berading</a></li>
         <li><a href="kliniek.html">Kliniek</a></li>
-        <li><a href="english.html" lang="en">English</a></li>
-      </ul>
-    </nav>
-    <nav aria-label="Doen saam">
-      <p class="foot-label">Doen saam</p>
-      <ul>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
+        <li><a href="gee.html">Tiendes</a></li>
         <li><a href="winkel.html">Winkel</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
       </ul>
-    </nav>
+    </div>
     <div>
-      <p class="foot-label">Kantoor</p>
+      <h2>Elders</h2>
       <ul>
-        <li><a href="tel:+27123451181">012 345 1181</a></li>
-        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
+        <li><a href="https://kleingroepe.collage.org.za/" target="_blank" rel="noopener noreferrer">Kleingroepe</a></li>
+        <li><a href="https://kidz.collage.org.za/" target="_blank" rel="noopener noreferrer">Kidz at Collage</a></li>
         <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
         <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
       </ul>
     </div>
   </div>
-  <div class="wrap foot-bar">
-    <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <span>
-      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
-      <span>Konsep deur ASC Software</span>
-    </span>
-  </div>
+  <div class="wrap fine">Demonstrasie-webwerf vir Collage Gemeenskapskerk. Vorms maak jou e-pos oop. Bestellings gaan na die lewendige winkel op collage.org.za.</div>
 </footer>
-
+<a class="wa" href="https://wa.me/27660167668?text=Hallo%20Collage%2C%20ek%20het%20%27n%20vraag.">WhatsApp</a>
 <script src="script.js"></script>
 </body>
 </html>

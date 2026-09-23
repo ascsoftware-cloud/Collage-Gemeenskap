@@ -2,178 +2,136 @@
 <html lang="af">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4f1ea">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1e3f73">
 <title>Winkel | Collage Gemeenskapskerk</title>
-<meta name="description" content="Collage se winkel. Registreer vir kampe en gebeure, koop hulpbronne, of ondersteun ’n projek soos ’n bankie of ’n boom.">
+<meta name="description" content="Collage se aanlyn winkel: kampe, kursusse, boeke en ondersteuningsprojekte. Betaling gebeur op collage.org.za.">
 <link rel="icon" href="images/logo.png">
-<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="page-shop">
-
+<body>
 <a class="skip" href="#main">Spring na hoofinhoud</a>
-
-<header class="masthead">
-  <div class="wrap">
-    <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="" width="42" height="42">
-      <span>
-        <span class="n" translate="no">Collage</span>
-        <span class="p">Gemeenskapskerk, Elarduspark</span>
-      </span>
-    </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" data-open="Kieslys" data-close="Maak toe">Kieslys</button>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="44" height="44"><span><strong translate="no">Collage</strong><small>Gemeenskapskerk</small></span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span class="lbl">Kieslys</span></button>
     <nav id="mainnav" aria-label="Hoofkieslys">
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Tuis</a></li>
         <li><a href="gebeure.html">Gebeure</a></li>
+        <li><a href="inligting.html">Inligting</a></li>
         <li><a href="berading.html">Berading</a></li>
         <li><a href="kliniek.html">Kliniek</a></li>
         <li><a href="english.html" lang="en">English</a></li>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="winkel.html" aria-current="page">Winkel</a></li>
+        <li class="has-sub"><a href="geloof.html">Geloof</a><ul>
+          <li><a href="geloof.html#verwag">By die erediens</a></li>
+          <li><a href="geloof.html#droom">Ons droom</a></li>
+          <li><a href="geloof.html#span">Die span</a></li>
+          <li><a href="geloof.html#leerstellings">Leerstellings</a></li>
+        </ul></li>
+        <li><a href="gee.html">Tiendes</a></li>
         <li><a href="kontak.html">Kontak</a></li>
-        <li><a class="nav-cta" href="gee.html">Gee</a></li>
+        <li><a href="winkel.html" aria-current="page">Winkel</a></li>
       </ul>
     </nav>
   </div>
 </header>
+<div class="sunday"><div class="wrap sunday-in"><p><span>Sondag</span><a href="besoekers.html">09:00 Erediens</a><a href="english.html" lang="en">11:00 English</a><a href="besoekers.html">17:00 Aanddiens</a></p></div></div>
 
-<main id="main">
-
-  <section class="shop-hero wrap">
-    <div class="rise-in">
-      <p class="eyebrow">Registreer en ondersteun</p>
-      <h1>Die <em>winkel.</em></h1>
-      <p class="lede">Kampe, hulpbronne en tuinprojekte, nie ’n rak vol handelsware nie. Die pryse hier is ’n oorsig. Die betaalstap sit op die amptelike winkel.</p>
-      <div class="btn-row">
-        <a class="btn" href="https://collage.org.za/shop/" target="_blank" rel="noopener noreferrer">Maak die winkel oop</a>
+<main id="main" class="page page-shop">
+  <div class="wrap">
+    <div class="shop-intro">
+      <div>
+        <h1>Winkel</h1>
+        <p>Dieselfde items as op collage.org.za. Voeg by die mandjie hier, en betaal op die amptelike winkel.</p>
       </div>
     </div>
-    <figure class="shop-photo">
-      <img src="images/coffee-shop-1.jpg" alt="Die koffiewinkel op Collage se terrein" width="1600" height="900" fetchpriority="high" decoding="async">
-      <figcaption>Die koffiewinkel is deur die week oop, en nie net vir lidmate nie.</figcaption>
-    </figure>
-  </section>
-
-  <section class="shop-body wrap">
-    <section class="catalogue reveal" aria-label="Wat in die winkel is">
-      <h2>Kampe en groepe</h2>
-      <div class="cat-grid">
-        <article class="cat-card" data-product="Kidz Camp" data-price="450">
-          <strong>Kidz Camp</strong><small>Registrasie vir die jaarlikse kinderkamp, met of sonder vervoer.</small>
-          <div class="cat-card-foot"><span class="price">R450–R900</span><button class="add-to-cart" type="button">Voeg by</button></div>
+    <div class="filters" role="tablist" aria-label="Kategorie">
+      <button type="button" class="is-on" data-filter="alles">Alles</button>
+      <button type="button" data-filter="Geleenthede">Geleenthede</button>
+      <button type="button" data-filter="Boeke">Boeke</button>
+      <button type="button" data-filter="Kursus">Kursus</button>
+      <button type="button" data-filter="Projekte">Projekte</button>
+    </div>
+    <div class="shop-layout">
+      <div class="catalog" id="catalog">
+        <article class="product" data-cat="Geleenthede" data-name="Hoop-Sondag" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2026/09/Hoop-Sondag_1000x1000_Sqr_Clean.jpg-600x600.jpeg" alt="" width="600" height="600">
+          <div class="body"><h3>Hoop-Sondag</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
         </article>
-        <article class="cat-card" data-product="Collage Mannekamp" data-price="1350">
-          <strong>Collage Mannekamp</strong><small>Die jaarlikse naweek vir die mans van die gemeente.</small>
-          <div class="cat-card-foot"><span class="price">R1 350</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        <article class="product" data-cat="Geleenthede" data-name="Eswatini vervoer" data-price="450">
+          <img src="https://collage.org.za/wp-content/uploads/2026/06/image-300x300.jpg" alt="" width="300" height="300">
+          <div class="body"><h3>Eswatini vervoer</h3><span class="price">R450</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
         </article>
-        <article class="cat-card" data-product="Kankerondersteuningsgroep" data-price="400">
-          <strong>Kankerondersteuningsgroep</strong><small>Registrasie vir die deurlopende ondersteuningsgroep.</small>
-          <div class="cat-card-foot"><span class="price">R400</span><button class="add-to-cart" type="button">Voeg by</button></div>
+        <article class="product" data-cat="Geleenthede" data-name="Kidz camp" data-price="450">
+          <img src="https://collage.org.za/wp-content/uploads/2026/05/Kidz-Camp_1000x1000_Sqr_Clean.jpg-600x600.jpg" alt="" width="600" height="600">
+          <div class="body"><h3>Kidz camp</h3><span class="price">R450–R900</span><button class="btn add-to-cart" type="button">Voeg by vanaf R450</button></div>
+        </article>
+        <article class="product" data-cat="Geleenthede" data-name="Mannekamp" data-price="1350">
+          <img src="https://collage.org.za/wp-content/uploads/2025/05/Mannekamp_Square_Clean_1000X1000-600x600.jpg" alt="" width="600" height="600">
+          <div class="body"><h3>Mannekamp</h3><span class="price">R1 350</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Geleenthede" data-name="Padel social" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2026/01/WhatsApp-Image-2026-05-27-at-09.00.59-600x600.jpeg" alt="" width="600" height="600">
+          <div class="body"><h3>Padel social</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Kursus" data-name="Kindertoesig" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2023/07/bigstock-Kids-Playing-Block-Toys-In-Pla-350958596-1-600x600.jpg" alt="" width="600" height="600">
+          <div class="body"><h3>Kindertoesig</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Kursus" data-name="Kankerondersteuningsgroep" data-price="400">
+          <img src="https://collage.org.za/wp-content/uploads/2025/01/KankerOnderteuning_Square_Clean_1000X1000-600x600.jpg" alt="" width="600" height="600">
+          <div class="body"><h3>Kankerondersteuningsgroep</h3><span class="price">R400</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Boeke" data-name="Vreemdeling tot volgeling" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2026/02/Vreemdeling-Square_Clean_1000x1000-600x600.jpg" alt="" width="600" height="600">
+          <div class="body"><h3>Vreemdeling tot volgeling</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Boeke" data-name="Die Weg" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2023/02/Die-Wef-300x300.png" alt="" width="300" height="300">
+          <div class="body"><h3>Die Weg</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Boeke" data-name="Alles oor Openbaring" data-price="150">
+          <img src="https://collage.org.za/wp-content/uploads/2020/08/Alles-oor-openbaring-FRONT-300x300.png" alt="" width="300" height="300">
+          <div class="body"><h3>Alles oor Openbaring</h3><span class="price">R150</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Boeke" data-name="Klim Jou Everest" data-price="150">
+          <img src="https://collage.org.za/wp-content/uploads/2020/08/klim_jou_everest-e1597761490274-300x300.jpg" alt="" width="300" height="300">
+          <div class="body"><h3>Klim Jou Everest</h3><span class="price">R150</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Boeke" data-name="Onbeperkte Genade" data-price="50">
+          <img src="https://collage.org.za/wp-content/uploads/2020/08/Onbeperkte_Genade-729x1024-1-300x300.png" alt="" width="300" height="300">
+          <div class="body"><h3>Onbeperkte Genade</h3><span class="price">R50</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Projekte" data-name="Koop ’n bankie" data-price="3500">
+          <img src="https://collage.org.za/wp-content/uploads/2021/05/Betesda-Lewensentrum-Logo-300x300.png" alt="" width="300" height="300">
+          <div class="body"><h3>Koop ’n bankie</h3><span class="price">R3 500</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
+        </article>
+        <article class="product" data-cat="Projekte" data-name="Koop ’n boom" data-price="2500">
+          <img src="https://collage.org.za/wp-content/uploads/2021/05/Betesda-Lewensentrum-Logo-300x300.png" alt="" width="300" height="300">
+          <div class="body"><h3>Koop ’n boom</h3><span class="price">R2 500</span><button class="btn add-to-cart" type="button">Voeg by</button></div>
         </article>
       </div>
-
-      <h2>Hulpbronne</h2>
-      <div class="cat-grid">
-        <article class="cat-card" data-product="Alles oor Openbaring" data-price="150">
-          <strong>Alles oor Openbaring</strong><small>’n Kursus oor die boek Openbaring.</small>
-          <div class="cat-card-foot"><span class="price">R150</span><button class="add-to-cart" type="button">Voeg by</button></div>
-        </article>
-        <article class="cat-card" data-product="Klim Jou Everest" data-price="150">
-          <strong>Klim Jou Everest</strong><small>’n Kursus oor deursettingsvermoë in geloof.</small>
-          <div class="cat-card-foot"><span class="price">R150</span><button class="add-to-cart" type="button">Voeg by</button></div>
-        </article>
-      </div>
-
-      <h2>Tuin en byeenkomste</h2>
-      <div class="cat-grid">
-        <article class="cat-card" data-product="Koop ’n bankie" data-price="3500">
-          <strong>Koop ’n bankie</strong><small>Borg ’n bankie vir die tuin op die kerkterrein.</small>
-          <div class="cat-card-foot"><span class="price">R3 500</span><button class="add-to-cart" type="button">Voeg by</button></div>
-        </article>
-        <article class="cat-card" data-product="Koop ’n boom" data-price="2500">
-          <strong>Koop ’n boom</strong><small>Borg ’n boom vir dieselfde tuin.</small>
-          <div class="cat-card-foot"><span class="price">R2 500</span><button class="add-to-cart" type="button">Voeg by</button></div>
-        </article>
-        <article class="cat-card" data-product="Padel Social" data-price="50">
-          <strong>Padel Social</strong><small>Inskrywing vir ’n gemeente-padelaand.</small>
-          <div class="cat-card-foot"><span class="price">R50</span><button class="add-to-cart" type="button">Voeg by</button></div>
-        </article>
-      </div>
-    </section>
-
-    <aside class="cart-panel" aria-labelledby="cart-title">
-      <div class="cart-head">
-        <div><p class="eyebrow">Jou keuse</p><h2 id="cart-title">Mandjie <span class="cart-count">0</span></h2></div>
-        <button class="cart-clear" type="button" hidden>Maak leeg</button>
-      </div>
-      <div class="cart-items" aria-live="polite"><p class="cart-empty">Jou mandjie is nog leeg.</p></div>
-      <div class="cart-total"><span>Totaal</span><strong>R0</strong></div>
-      <a class="btn cart-checkout" href="https://collage.org.za/shop/" target="_blank" rel="noopener noreferrer">Gaan na amptelike winkel</a>
-      <p class="cart-note">Hierdie mandjie is ’n voorskou. Betaling gebeur op die amptelike winkel.</p>
-    </aside>
-  </section>
-
-  <figure class="caption-split shop-feature wrap reveal">
-    <img src="images/coffee-shop-2.jpg" alt="Gemeentelede by die koffiewinkel" width="1600" height="900" loading="lazy" decoding="async">
-    <figcaption>
-      <b>’n Bekostigbare kombuis</b>
-      Vir wie ook al by die kerk uithang. Die lys hierbo is ’n oorsig. Die volledige winkel verander saam met die kalender.
-    </figcaption>
-  </figure>
-
-  <p class="next-step wrap">Liewer direk gee, sonder ’n item? <a href="gee.html">Maak ’n EFT of aanlyn bydrae</a>.</p>
-
+      <aside class="cart-panel card">
+        <h2>Mandjie <span class="cart-count">0</span></h2>
+        <div class="cart-lines" id="cart-lines"><p class="cart-empty">Jou mandjie is nog leeg.</p></div>
+        <div class="cart-total"><span>Totaal</span><strong id="cart-total">R0</strong></div>
+        <a class="btn btn-block" id="checkout" href="https://collage.org.za/shop/" target="_blank" rel="noopener noreferrer">Betaal op collage.org.za</a>
+        <p class="mini-note">Die mandjie tel hier op. Die betaling self gebeur op die amptelike winkel.</p>
+      </aside>
+    </div>
+  </div>
 </main>
-
 <footer class="site-foot">
-  <div class="wrap foot-main">
-    <div>
-      <p class="foot-name" translate="no">Collage</p>
-      <p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p>
-    </div>
-    <nav aria-label="Voetkieslys">
-      <p class="foot-label">Besoek</p>
-      <ul>
-        <li><a href="gebeure.html">Gebeure</a></li>
-        <li><a href="berading.html">Berading</a></li>
-        <li><a href="kliniek.html">Kliniek</a></li>
-        <li><a href="english.html" lang="en">English</a></li>
-      </ul>
-    </nav>
-    <nav aria-label="Doen saam">
-      <p class="foot-label">Doen saam</p>
-      <ul>
-        <li><a href="geloof.html">Geloof</a></li>
-        <li><a href="gee.html">Gee</a></li>
-        <li><a href="winkel.html" aria-current="page">Winkel</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
-    <div>
-      <p class="foot-label">Kantoor</p>
-      <ul>
-        <li><a href="tel:+27123451181">012 345 1181</a></li>
-        <li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li>
-        <li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        <li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li>
-      </ul>
-    </div>
+  <div class="wrap foot-grid">
+    <div><p class="tagline">Collage</p><p>Gemeenskapskerk<br>Gypsum- &amp; Hornblendstraat<br>Elarduspark, 0181</p></div>
+    <div><h2>Visit</h2><ul><li><a href="gebeure.html">Gebeure</a></li><li><a href="berading.html">Berading</a></li><li><a href="kliniek.html">Kliniek</a></li><li><a href="english.html">English</a></li></ul></div>
+    <div><h2>Take part</h2><ul><li><a href="geloof.html">Geloof</a></li><li><a href="gee.html">Gee</a></li><li><a href="kontak.html">Kontak</a></li><li><a href="winkel.html">Winkel</a></li></ul></div>
+    <div><h2>Office</h2><ul><li></li><li><a href="mailto:info@collage.org.za">info@collage.org.za</a></li><li><a href="https://facebook.com/collagegemeente" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://x.com/collagegemeente" target="_blank" rel="noopener noreferrer">X</a></li></ul></div>
   </div>
-  <div class="wrap foot-bar">
-    <span>&copy; 2026 Collage Gemeenskapskerk</span>
-    <span>
-      <a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a>
-      <span>Konsep deur ASC Software</span>
-    </span>
-  </div>
+  <div class="wrap fine">© 2026 Collage Gemeenskapskerk <span class="footer-apps"><a href="https://apps.apple.com/app/id6751739190" target="_blank" rel="noopener noreferrer">App Store</a> <a href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_PFFHQT" target="_blank" rel="noopener noreferrer">Google Play</a></span> · Konsep deur ASC Software</div>
 </footer>
-
+<a class="wa" href="https://wa.me/27660167668?text=Hallo%20Collage%2C%20ek%20het%20%27n%20vraag%20oor%20die%20winkel.">WhatsApp</a>
 <script src="script.js"></script>
 </body>
 </html>

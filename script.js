@@ -1,36 +1,30 @@
 (function(){
   var btn=document.querySelector('.menu-btn');
   var nav=document.getElementById('mainnav');
-  var head=document.querySelector('.masthead');
-  var mobile=window.matchMedia('(max-width: 1040px)');
+  var mobile=window.matchMedia('(max-width: 1080px)');
 
   if(btn&&nav){
-    var openLabel=btn.getAttribute('data-open')||btn.textContent;
-    var closeLabel=btn.getAttribute('data-close')||'Maak toe';
+    var label=btn.querySelector('.lbl');
     function syncInert(){
       nav.inert=mobile.matches&&btn.getAttribute('aria-expanded')!=='true';
     }
     function set(open){
       btn.setAttribute('aria-expanded',String(open));
       nav.classList.toggle('is-open',open);
-      btn.setAttribute('aria-label',open?closeLabel:openLabel);
-      btn.title=open?closeLabel:openLabel;
+      if(label)label.textContent=open?'Maak toe':'Kieslys';
+      btn.setAttribute('aria-label',open?'Maak kieslys toe':'Maak kieslys oop');
       document.body.classList.toggle('nav-open',open&&mobile.matches);
       syncInert();
     }
     btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
-    nav.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+    nav.addEventListener('click',function(e){
+      if(e.target.closest('a')&&mobile.matches)set(false);
+    });
     document.addEventListener('keydown',function(e){
       if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus();}
     });
     mobile.addEventListener('change',function(){if(!mobile.matches)set(false);else syncInert();});
     syncInert();
-  }
-
-  if(head){
-    function onScroll(){head.classList.toggle('is-scrolled',window.scrollY>8);}
-    onScroll();
-    window.addEventListener('scroll',onScroll,{passive:true});
   }
 
   var calendarToggle=document.querySelector('.calendar-toggle');
@@ -43,68 +37,6 @@
     });
   }
 
-  var cartCards=document.querySelectorAll('.cat-card');
-  var cartItems=document.querySelector('.cart-items');
-  var cartCount=document.querySelector('.cart-count');
-  var cartTotal=document.querySelector('.cart-total strong');
-  var cartClear=document.querySelector('.cart-clear');
-  if(cartCards.length&&cartItems&&cartCount&&cartTotal){
-    var cart={};
-    function money(value){return 'R'+value.toLocaleString('en-ZA');}
-    function renderCart(){
-      var items=Object.values(cart);
-      var count=items.reduce(function(total,item){return total+item.quantity;},0);
-      var total=items.reduce(function(sum,item){return sum+(item.price*item.quantity);},0);
-      cartCount.textContent=String(count);
-      cartTotal.textContent=money(total);
-      if(cartClear)cartClear.hidden=!items.length;
-      if(!items.length){
-        cartItems.innerHTML='<p class="cart-empty">Jou mandjie is nog leeg.</p>';
-        return;
-      }
-      cartItems.innerHTML=items.map(function(item){
-        return '<div class="cart-item"><div><strong>'+item.name+'</strong><span>'+item.quantity+' × '+money(item.price)+'</span></div><button type="button" data-remove-cart="'+item.name+'">Verwyder</button></div>';
-      }).join('');
-      cartItems.querySelectorAll('[data-remove-cart]').forEach(function(button){
-        button.addEventListener('click',function(){delete cart[button.getAttribute('data-remove-cart')];renderCart();});
-      });
-    }
-    cartCards.forEach(function(card){
-      card.querySelector('.add-to-cart').addEventListener('click',function(){
-        var name=card.getAttribute('data-product');
-        var price=Number(card.getAttribute('data-price'));
-        if(!cart[name])cart[name]={name:name,price:price,quantity:0};
-        cart[name].quantity+=1;
-        renderCart();
-      });
-    });
-    if(cartClear)cartClear.addEventListener('click',function(){cart={};renderCart();});
-    renderCart();
-  }
-
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var nodes=document.querySelectorAll('.reveal');
-  if(!reduce&&'IntersectionObserver' in window&&nodes.length){
-    var vh=window.innerHeight||800;
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(!en.isIntersecting)return;
-        en.target.classList.add('is-in');
-        io.unobserve(en.target);
-      });
-    },{threshold:.14,rootMargin:'0px 0px -8% 0px'});
-    nodes.forEach(function(el){
-      if(el.getBoundingClientRect().top<vh*0.92){
-        el.classList.add('is-in');
-      }else{
-        el.classList.add('wait');
-        io.observe(el);
-      }
-    });
-  }else{
-    nodes.forEach(function(el){el.classList.add('is-in');});
-  }
-
   try{
     var now=new Date();
     var idx=now.getDay();
@@ -114,29 +46,12 @@
       if(Number.isNaN(i))return;
       var d=new Date(sunday.getFullYear(),sunday.getMonth(),sunday.getDate()+i);
       var num=col.querySelector('.d-num');
-      if(num)num.textContent=String(d.getDate()).padStart(2,'0');
-      col.title=new Intl.DateTimeFormat('af-ZA',{weekday:'long',day:'numeric',month:'long'}).format(d);
+      if(num)num.textContent=String(d.getDate());
       if(i===idx){
         col.classList.add('is-today');
         col.setAttribute('aria-current','date');
       }
     });
-    var line=document.getElementById('today-line');
-    if(line){
-      line.textContent='Vandag is '+new Intl.DateTimeFormat('af-ZA',{weekday:'long',day:'numeric',month:'long'}).format(now);
-    }
-    var next=document.querySelector('.next b');
-    if(next){
-      var mins=now.getHours()*60+now.getMinutes();
-      var label='Sondag 09:00';
-      if(idx===0){
-        if(mins<9*60)label='vandag 09:00';
-        else if(mins<11*60)label='vandag 11:00';
-        else if(mins<17*60)label='vandag 17:00';
-        else label='volgende Sondag 09:00';
-      }
-      next.textContent=label;
-    }
     document.body.classList.add('calendar-ready');
   }catch(e){}
 
@@ -147,6 +62,7 @@
       var data=new FormData(form);
       var name=String(data.get('naam')||'').trim();
       var email=String(data.get('epos')||'').trim();
+      var phone=String(data.get('foon')||'').trim();
       var topic=String(data.get('onderwerp')||'').trim();
       var msg=String(data.get('boodskap')||'').trim();
       var status=document.getElementById('form-status');
@@ -164,9 +80,72 @@
         if(first)first.focus();
         return;
       }
-      var body='Naam: '+name+'\nE-pos: '+email+'\n\n'+msg;
+      var body='Naam: '+name+'\nE-pos: '+email+(phone?'\nSelfoon: '+phone:'')+'\n\n'+msg;
       if(status)status.textContent='Jou e-posprogram behoort nou oop te maak. Indien nie, skryf direk aan info@collage.org.za.';
-      window.location.href='mailto:info@collage.org.za?subject='+encodeURIComponent('Navraag: '+topic)+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:info@collage.org.za?subject='+encodeURIComponent(topic+' — '+name)+'&body='+encodeURIComponent(body);
+    });
+  }
+
+  var loadCal=document.getElementById('load-calendar');
+  if(loadCal){
+    loadCal.addEventListener('click',function(){
+      var start=document.getElementById('event-start');
+      if(start)start.remove();
+      var s=document.createElement('script');
+      s.async=true;
+      s.src='https://dashboard.static.subsplash.com/production/web-client/external/embed-1.1.0.js';
+      s.onload=function(){
+        if(window.subsplashEmbed){
+          subsplashEmbed('+y9cz/lb/ca/+8w2mgvg?embed&branding','https://subsplash.com/','subsplash-embed-8w2mgvg');
+        }
+      };
+      document.body.appendChild(s);
+    });
+  }
+
+  var catalog=document.getElementById('catalog');
+  var lines=document.getElementById('cart-lines');
+  var totalEl=document.getElementById('cart-total');
+  var countEl=document.querySelector('.cart-count');
+  if(catalog&&lines&&totalEl){
+    var cart={};
+    function money(n){return 'R'+n.toLocaleString('en-ZA');}
+    function render(){
+      var items=Object.keys(cart).map(function(k){return cart[k];});
+      var count=items.reduce(function(s,i){return s+i.qty;},0);
+      var total=items.reduce(function(s,i){return s+i.qty*i.price;},0);
+      if(countEl)countEl.textContent=String(count);
+      totalEl.textContent=money(total);
+      if(!items.length){lines.innerHTML='<p class="cart-empty">Jou mandjie is nog leeg.</p>';return;}
+      lines.innerHTML=items.map(function(i){
+        return '<div class="cart-line"><span>'+i.qty+' × '+i.name+'</span><button type="button" data-remove="'+i.name+'">Verwyder</button></div>';
+      }).join('');
+    }
+    catalog.addEventListener('click',function(e){
+      var button=e.target.closest('.add-to-cart');
+      if(!button)return;
+      var card=button.closest('.product');
+      var name=card.getAttribute('data-name');
+      var price=Number(card.getAttribute('data-price'));
+      if(!cart[name])cart[name]={name:name,price:price,qty:0};
+      cart[name].qty+=1;
+      render();
+    });
+    lines.addEventListener('click',function(e){
+      var button=e.target.closest('[data-remove]');
+      if(!button)return;
+      delete cart[button.getAttribute('data-remove')];
+      render();
+    });
+    document.querySelectorAll('.filters button').forEach(function(button){
+      button.addEventListener('click',function(){
+        document.querySelectorAll('.filters button').forEach(function(b){b.classList.remove('is-on');});
+        button.classList.add('is-on');
+        var cat=button.getAttribute('data-filter');
+        catalog.querySelectorAll('.product').forEach(function(card){
+          card.hidden=cat!=='alles'&&card.getAttribute('data-cat')!==cat;
+        });
+      });
     });
   }
 })();
